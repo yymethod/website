@@ -15,9 +15,7 @@
 -   **X**: https://x.com/yymethod2025 (pinned fingerprint)
 -   **Bluesky**: https://bsky.app/profile/benchantech.bsky.social
     (pinned fingerprint)
--   **Archive.org snapshots**:
-    -   `public-key.asc`: `<PASTE_VERSIONED_SNAPSHOT_URL>`{=html}
-    -   `KEYRING.md`: `<PASTE_VERSIONED_SNAPSHOT_URL>`{=html}
+-   **Archive.org snapshots**: https://archive.org/details/keyring_202508
 
 ------------------------------------------------------------------------
 
@@ -45,6 +43,28 @@ gpg --with-colons keys/public-key.asc | awk -F: '/^fpr:/ {print toupper($10); ex
 git log --show-signature -1 <commit-sha>
 # or, tag
 git tag -v <tag-name>
+```
+
+4)  Verify OTS (OpenTimeStamps)
+   
+``` bash
+# Verify the key file’s timestamp proof
+ots verify --file keys/public-key.asc keys/public-key.asc.ots
+
+# Verify the KEYRING.md timestamp proof
+ots verify --file KEYRING.md KEYRING.md.ots
+
+# If verification reports "pending" or "upgrade recommended", upgrade proofs:
+ots upgrade keys/public-key.asc.ots
+ots upgrade KEYRING.md.ots
+
+# Re-run verification after upgrade
+ots verify --file keys/public-key.asc keys/public-key.asc.ots
+ots verify --file KEYRING.md KEYRING.md.ots
+
+# (Optional) Confirm the proof binds to the expected SHA256
+ots info keys/public-key.asc.ots
+shasum -a 256 keys/public-key.asc   # Must match the digest shown by 'ots info'
 ```
 
 Signature must be **Good** and the signer's fingerprint must match:
@@ -89,8 +109,7 @@ Replacement key reference
   "out_of_band": {
     "x": "https://x.com/yymethod2025",
     "bluesky": "https://bsky.app/profile/benchantech.bsky.social",
-    "archive_public_key": "<PASTE_VERSIONED_SNAPSHOT_URL>",
-    "archive_keyring": "<PASTE_VERSIONED_SNAPSHOT_URL>"
+    "archive.org": "https://archive.org/details/keyring_202508"
   }
 }
 ```
