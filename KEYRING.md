@@ -10,10 +10,13 @@ This repository uses **signed commits and tags** with GPG for provenance.
 - **Owner**: Ben Chan
 - **Email**: benchanviolin@gmail.com
 - **Fingerprint**: 63FC60BA7F66F645CFBF9C8482BBD72944B8168E
+- **SHA256**: 4560c6d0fe25d7af8f217d412b3ddcf24fef8d8e8f57b828aa07e548b891d227
 - **Created**: 2025-08-16
 - **Purpose**: Commit and tag signing
 - **Public key**: [`keys/public-key.asc`](keys/public-key.asc)
-
+- **X**: [`https://x.com/yymethod2025`](https://x.com/yymethod2025)
+- **BlueSky**:[`https://bsky.app/profile/benchantech.bsky.social`](https://bsky.app/profile/benchantech.bsky.social)
+- **Archive.org**[`https://archive.org/details/public-key`](https://archive.org/details/public-key), [`https://archive.org/details/KEYRING`](https://archive.org/details/KEYRING)
 ---
 
 ## 🗃️ Retired Keys
