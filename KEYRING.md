@@ -45,3 +45,5 @@ This repository uses **signed commits and tags** with GPG for provenance.
 - Auditors should always cross-check fingerprints against at least two
   independent sources (e.g. repo + Archive.org, or repo + X/Bluesky).
 
+shasum -a 256 keys/public-key.asc
+
