@@ -65,7 +65,7 @@
   <!-- Status Strip -->
   <div class="mx-auto max-w-3xl px-6 pb-8">
     <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center text-xs font-mono tracking-wide">
-      <span class="flex items-center gap-2 text-gray-600"><span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>Professional v1.0–v2.3 · retiring March 2026</span>
+      <span class="flex items-center gap-2 text-gray-600"><span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>Professional v1.0–v2.3 · in professional use</span>
       <span class="flex items-center gap-2 text-gray-500"><span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-700"></span>YY Method Home · independently active</span>
     </div>
   </div>
@@ -274,41 +274,6 @@
 
   <div class="mx-auto max-w-3xl px-6 divider"></div>
 
-  <!-- Artifact Security and Knowledge Custody -->
-  <section class="mx-auto max-w-3xl px-6 py-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Artifact Security and Knowledge Custody</h2>
-    <p class="text-gray-400 text-sm leading-relaxed">
-      Knowledge artifacts produced by this method are organizational assets. They contain extracted reasoning, historical constraints, and tribal context that took years to accumulate and hours to encode. That content must not travel through repositories into the open.
-    </p>
-    <p class="text-gray-300 text-sm leading-relaxed mt-4 font-medium">
-      The rule: artifacts live outside commits.
-    </p>
-    <p class="text-gray-400 text-sm leading-relaxed mt-4">
-      A repository is a shared, versioned, often-connected surface. Any artifact committed to a repository — internal or external — is one misconfiguration away from exposure. That is not an acceptable custody model for knowledge that represents genuine organizational IP.
-    </p>
-    <p class="text-gray-400 text-sm leading-relaxed mt-4">The correct model is local encrypted storage with controlled access:</p>
-    <ul class="mt-4 space-y-4 text-sm">
-      <li class="flex gap-3">
-        <span class="text-gray-600 select-none shrink-0">—</span>
-        <div><span class="text-gray-200 font-medium">Keystores with encryption</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">Knowledge artifacts are stored in encrypted containers on local machines or secure internal systems, not in version control. The artifact content is never committed in plaintext.</span></div>
-      </li>
-      <li class="flex gap-3">
-        <span class="text-gray-600 select-none shrink-0">—</span>
-        <div><span class="text-gray-200 font-medium">Access control by role</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">Organizational heads and designated practitioners hold the decryption credentials. Access is scoped to the people who need to use the knowledge as a working reference, not broadcast to everyone with repo access.</span></div>
-      </li>
-      <li class="flex gap-3">
-        <span class="text-gray-600 select-none shrink-0">—</span>
-        <div><span class="text-gray-200 font-medium">AI-local context, not AI-cloud training data</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">When organizational heads work with AI systems, the relevant artifacts are loaded as local context for that session. The knowledge grounds the AI's reasoning without being transmitted to external systems or persisted in ways outside the organization's control.</span></div>
-      </li>
-      <li class="flex gap-3">
-        <span class="text-gray-600 select-none shrink-0">—</span>
-        <div><span class="text-gray-200 font-medium">Separation from the codebase</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">The repository holds the code, the method documentation, and the public-facing materials. The organization's captured knowledge lives elsewhere, secured separately, and is never part of the commit history.</span></div>
-      </li>
-    </ul>
-  </section>
-
-  <div class="mx-auto max-w-3xl px-6 divider"></div>
-
   <!-- What the Method Protects Against -->
   <section class="mx-auto max-w-3xl px-6 py-10">
     <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">What the Method Protects Against</h2>
@@ -349,6 +314,41 @@
       <span class="text-gray-400">4–5/6 <span class="text-gray-500">= salvage</span></span>
       <span class="text-gray-500">≤3/6 <span class="text-gray-600">= discard or redo</span></span>
     </div>
+  </section>
+
+  <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+  <!-- Artifact Security and Knowledge Custody -->
+  <section class="mx-auto max-w-3xl px-6 py-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Artifact Security and Knowledge Custody</h2>
+    <p class="text-gray-400 text-sm leading-relaxed">
+      Knowledge artifacts produced by this method are organizational assets. They contain extracted reasoning, historical constraints, and tribal context that took years to accumulate and hours to encode. That content must not travel through repositories into the open.
+    </p>
+    <p class="text-gray-300 text-sm leading-relaxed mt-4 font-medium">
+      The rule: artifacts live outside commits.
+    </p>
+    <p class="text-gray-400 text-sm leading-relaxed mt-4">
+      A repository is a shared, versioned, often-connected surface. Any artifact committed to a repository — internal or external — is one misconfiguration away from exposure. That is not an acceptable custody model for knowledge that represents genuine organizational IP.
+    </p>
+    <p class="text-gray-400 text-sm leading-relaxed mt-4">The correct model is local encrypted storage with controlled access:</p>
+    <ul class="mt-4 space-y-4 text-sm">
+      <li class="flex gap-3">
+        <span class="text-gray-600 select-none shrink-0">—</span>
+        <div><span class="text-gray-200 font-medium">Keystores with encryption</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">Knowledge artifacts are stored in encrypted containers on local machines or secure internal systems, not in version control. The artifact content is never committed in plaintext.</span></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-gray-600 select-none shrink-0">—</span>
+        <div><span class="text-gray-200 font-medium">Access control by role</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">Organizational heads and designated practitioners hold the decryption credentials. Access is scoped to the people who need to use the knowledge as a working reference, not broadcast to everyone with repo access.</span></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-gray-600 select-none shrink-0">—</span>
+        <div><span class="text-gray-200 font-medium">AI-local context, not AI-cloud training data</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">When organizational heads work with AI systems, the relevant artifacts are loaded as local context for that session. The knowledge grounds the AI's reasoning without being transmitted to external systems or persisted in ways outside the organization's control.</span></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-gray-600 select-none shrink-0">—</span>
+        <div><span class="text-gray-200 font-medium">Separation from the codebase</span><span class="text-gray-600 mx-2">·</span><span class="text-gray-400">The repository holds the code, the method documentation, and the public-facing materials. The organization's captured knowledge lives elsewhere, secured separately, and is never part of the commit history.</span></div>
+      </li>
+    </ul>
   </section>
 
   <div class="mx-auto max-w-3xl px-6 divider"></div>
@@ -410,17 +410,17 @@
       <div class="glass rounded-xl p-6 flex flex-col gap-3 opacity-60">
         <div class="flex items-center justify-between">
           <p class="text-gray-300 font-semibold text-sm">YY Method (Professional)</p>
-          <span class="flex items-center gap-1.5 text-xs text-gray-500 font-mono"><span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>retiring</span>
+          <span class="flex items-center gap-1.5 text-xs text-gray-500 font-mono"><span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>in professional use</span>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed">The professional engagement track — applied to organizations, codebases, and team knowledge systems. Independent lineage v1.0–v2.3.</p>
-        <p class="text-gray-600 text-xs font-mono">concluded March 2026</p>
+        <p class="text-gray-400 text-sm leading-relaxed">The organizational track — carried into professional practice as a company asset. Independent development of this track is closed at v2.3.</p>
+        <p class="text-gray-600 text-xs font-mono">independent lineage closed March 2026</p>
       </div>
       <div class="glass rounded-xl p-6 flex flex-col gap-3">
         <div class="flex items-center justify-between">
           <p class="text-gray-200 font-semibold text-sm">YY Method Home</p>
           <span class="flex items-center gap-1.5 text-xs text-emerald-600 font-mono"><span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-700"></span>active</span>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed">The continuing independent branch — applying the same discipline to individuals and families rather than organizations.</p>
+        <p class="text-gray-400 text-sm leading-relaxed">The individual and personal track — teachable and licensable at the practitioner's discretion. Paid engagements engaging this track do so under a practitioner-granted license.</p>
         <p class="text-gray-600 text-xs font-mono">independently active</p>
       </div>
     </div>
@@ -432,13 +432,13 @@
     <div class="glass rounded-xl p-6" style="border-color: rgba(99,102,241,0.2);">
       <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400/70 mb-4">Public Notice</h2>
       <p class="text-gray-300 text-sm leading-relaxed">
-        The YY Method's professional track concludes its independent lineage at v2.3, March 2026. The Home track continues as a separate, independently active branch.
+        The YY Method's professional track enters formal professional use at v2.3, March 2026 — carried into a professional engagement as an organizational asset. Independent development of that track does not continue.
       </p>
       <p class="text-gray-400 text-sm leading-relaxed mt-4">
-        This methodology was developed independently prior to employment. It is being carried into a professional engagement where it will be applied and developed further as a company asset. I make no further claim to derivatives produced in that context.
+        The Home track is retained as independent personal intellectual property. It is teachable and licensable at the practitioner's discretion. Any paid work engaging the Home track does so under a license granted by the practitioner — not derived from the professional engagement.
       </p>
       <p class="text-gray-500 text-sm leading-relaxed mt-4">
-        The public record — v1.0 through v2.3, version-controlled and signed — stands as the complete independent professional lineage. What follows belongs to the work.
+        The public record — v1.0 through v2.3, version-controlled and signed — stands as the complete independent professional lineage. What follows in the professional context belongs to the work.
       </p>
     </div>
   </section>
@@ -452,7 +452,7 @@
   <footer class="mx-auto max-w-7xl px-6 py-8 divider">
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
-        <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional lineage concluded v2.3</span>
+        <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
         <span class="text-gray-700">·</span>
         <a href="https://benchantech.com" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Ben Chan Tech LLC</a>
       </div>
