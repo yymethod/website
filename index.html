@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YY Method™ | Ben Chan</title>
-  <meta name="description" content="The YY Method is a personal professional methodology by Ben Chan for capturing the reasoning behind decisions — structured for teams, durable for AI." />
+  <meta name="description" content="Human first, AI second. The YY Method™ by Ben Chan — a methodology for extracting, structuring, and preserving institutional knowledge. Capture → Why → Why-Not → Commit → Timestamp." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -48,6 +48,16 @@
       "https://benchantech.com",
       "https://www.youtube.com/@benchanviolin",
       "https://benchanviolin.substack.com"
+    ],
+    "knowsAbout": [
+      "YY Method",
+      "institutional knowledge preservation",
+      "Architecture Decision Records",
+      "knowledge hierarchy",
+      "AI grounding",
+      "human-first AI methodology",
+      "tribal knowledge extraction",
+      "decision reasoning artifacts"
     ]
   }
   </script>
@@ -63,6 +73,121 @@
       "@id": "https://benchantech.com/#person",
       "name": "Ben Chan"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "YY Method",
+    "description": "A personal professional methodology for extracting, structuring, and preserving institutional knowledge — specifically the reasoning behind decisions — into structured artifacts readable by both humans and AI systems. The core loop: Capture → Why → Why-Not → Commit → Timestamp. Developed by Ben Chan.",
+    "url": "https://yymethod.com",
+    "author": {
+      "@type": "Person",
+      "@id": "https://benchantech.com/#person",
+      "name": "Ben Chan"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the YY Method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method is a personal professional methodology for extracting, structuring, and preserving institutional knowledge — specifically the reasoning behind decisions that normally exists only inside people's heads. Developed by Ben Chan, it uses a five-step loop (Capture → Why → Why-Not → Commit → Timestamp) to produce structured knowledge artifacts that are durable, queryable, and readable by both humans and AI systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'Human first, AI second' mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the YY Method, 'human first, AI second' is the governing principle for AI integration: humans extract and encode knowledge first; AI reads and operates against those artifacts second. AI is not used to draft knowledge artifacts — it synthesizes, cross-references, and generates questions against human-captured content. Human captures → AI reads. Not: AI drafts → human reviews. The second sequence looks like efficiency; it is a quality inversion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you use the YY Method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method uses a five-step loop: 1. Capture — state what is actually known, including what lives only in someone's head. 2. Why — record the reasoning behind the decision. 3. Why-Not — record what was considered and rejected, and what the decision depends on being true. 4. Commit — encode into a structured, queryable artifact. 5. Timestamp — mark when captured and define the specific expiration condition. The Why-Not step is non-optional and is what separates YY artifacts from ordinary documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the YY Method core loop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method core loop is: Capture → Why → Why-Not → Commit → Timestamp. Each artifact moves through these five stages, producing a structured reasoning chain that captures not only what was decided but the constraints, rejected alternatives, and a defined freshness boundary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is YY Method AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method's approach to AI is 'human first, AI second.' After human capture, AI can synthesize, cross-reference, flag inconsistencies, and query across the full artifact set. In a hierarchical knowledge system, AI's active role is question generation: when an upstream artifact changes, AI identifies affected downstream nodes and surfaces the specific questions a human must answer to re-verify each one. The method is specifically designed to make AI systems trustworthy by grounding them in human-authored knowledge artifacts, not AI-generated summaries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between the YY Method and standard documentation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard documentation records what is. The YY Method records what is, what was considered against it, and what the decision depends on. The Why-Not step — capturing rejected alternatives and breaking conditions — is what separates YY artifacts from ordinary documentation. Documentation fed to AI without this structure produces hallucinations; YY artifacts are designed to make AI responses trustworthy."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the YY Method",
+    "description": "The five-step loop for creating YY Method knowledge artifacts that preserve the reasoning behind decisions for both human and AI consumption.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://benchantech.com/#person",
+      "name": "Ben Chan"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": "1",
+        "name": "Capture",
+        "text": "State what is actually known about a system, decision, or constraint. Not what the documentation says. What is actually true, including what lives only in someone's head."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "2",
+        "name": "Why",
+        "text": "Record why the decision was made, why the system works the way it does, why the constraint exists. This is the first branch."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "3",
+        "name": "Why-Not",
+        "text": "Record what was considered and rejected, what the decision depends on being true, what would break it. This is the inversion step. It is not optional."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "4",
+        "name": "Commit",
+        "text": "Encode the result into a structured artifact: a reasoning chain that can be queried. A durable, timestamped act of record."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "5",
+        "name": "Timestamp",
+        "text": "Mark when this was captured, by whom, under what conditions. Include a defined expiration condition: the specific event that would make this artifact stale. Without this, a freshness marker is theater."
+      }
+    ]
   }
   </script>
 </head>
@@ -105,8 +230,8 @@
   <div class="mx-auto max-w-3xl px-6 divider"></div>
 
   <!-- What the YY Method Is -->
-  <section class="mx-auto max-w-3xl px-6 py-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">What the YY Method Is</h2>
+  <section id="what-is-the-yy-method" class="mx-auto max-w-3xl px-6 py-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">What Is the YY Method?</h2>
     <p class="text-gray-300 text-sm leading-relaxed">
       The YY Method is a personal professional methodology for extracting, structuring, and preserving institutional knowledge — specifically the knowledge that normally exists only inside people's heads.
     </p>
@@ -159,9 +284,9 @@
 
   <div class="mx-auto max-w-3xl px-6 divider"></div>
 
-  <!-- AI and This Method -->
-  <section class="mx-auto max-w-3xl px-6 py-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">AI and This Method</h2>
+  <!-- Human First, AI Second -->
+  <section id="human-first-ai-second" class="mx-auto max-w-3xl px-6 py-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Human First, AI Second</h2>
     <p class="text-gray-300 text-sm leading-relaxed font-medium">Human captures. AI reads.</p>
     <p class="text-gray-400 text-sm leading-relaxed mt-4">
       AI is powerful against well-structured knowledge and destructive against incomplete or ungrounded knowledge. It will hallucinate explanations, infer false intent, and produce confident summaries that are wrong in ways that are hard to detect until something breaks. The hallucinations are coherent. That is what makes them dangerous.
@@ -183,8 +308,8 @@
   <div class="mx-auto max-w-3xl px-6 divider"></div>
 
   <!-- The Core Loop -->
-  <section class="mx-auto max-w-3xl px-6 py-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">The Core Loop</h2>
+  <section id="the-core-loop" class="mx-auto max-w-3xl px-6 py-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">The Core Loop: Capture → Why → Why-Not → Commit → Timestamp</h2>
     <div class="loop-block text-center mb-8">
       Capture → Why → Why-Not → Commit → Timestamp
     </div>
