@@ -36,31 +36,38 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://benchantech.com/#person",
-    "name": "Ben Chan",
-    "url": "https://benchantech.com",
-    "sameAs": [
-      "https://benchantech.com",
-      "https://yymethod.com",
-      "https://home.yymethod.com",
-      "https://yyand.me",
-      "https://yysworld.com",
-      "https://www.youtube.com/@benchanviolin",
-      "https://benchanviolin.substack.com"
-    ],
-    "knowsAbout": [
-      "YY Method",
-      "institutional knowledge preservation",
-      "Architecture Decision Records",
-      "knowledge hierarchy",
-      "AI grounding",
-      "human-first AI methodology",
-      "tribal knowledge extraction",
-      "decision reasoning artifacts"
-    ]
-  }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CreativeWork", "DefinedTerm"],
+      "@id": "https://home.yymethod.com/#yy-method-home",
+      "name": "YY Method Home Edition",
+      "url": "https://home.yymethod.com/",
+      "description": "YY Method Home Edition is the applied home and case-registry track of the YY Method.",
+      "creator": { "@id": "https://benchantech.com/#person" },
+      "publisher": { "@id": "https://benchantech.com/#organization" },
+      "isPartOf": { "@id": "https://yymethod.com/#yy-method" },
+      "about": { "@id": "https://yymethod.com/#yy-method" },
+      "mainEntityOfPage": { "@id": "https://home.yymethod.com/#webpage" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://home.yymethod.com/#website",
+      "name": "YY Method Home",
+      "url": "https://home.yymethod.com/",
+      "creator": { "@id": "https://benchantech.com/#person" },
+      "about": { "@id": "https://home.yymethod.com/#yy-method-home" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://home.yymethod.com/#webpage",
+      "url": "https://home.yymethod.com/",
+      "name": "YY Method Home Edition",
+      "isPartOf": { "@id": "https://home.yymethod.com/#website" },
+      "mainEntity": { "@id": "https://home.yymethod.com/#yy-method-home" }
+    }
+  ]
+}
   </script>
   <script type="application/ld+json">
   {
