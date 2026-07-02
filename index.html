@@ -20,6 +20,23 @@
     .ring-fine { box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
     .shadow-soft { box-shadow: 0 20px 40px rgba(0,0,0,.45); }
     .divider { border-top: 1px solid rgba(255,255,255,.07); }
+    .nav-menu { position: relative; }
+    .nav-menu summary { list-style: none; cursor: pointer; }
+    .nav-menu summary::-webkit-details-marker { display: none; }
+    .nav-menu[open] summary { color: #d1d5db; }
+    .nav-menu-panel {
+      position: absolute;
+      right: 0;
+      top: calc(100% + .75rem);
+      min-width: 13rem;
+      padding: .5rem;
+      border-radius: .75rem;
+      background: rgba(10,11,15,.96);
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      z-index: 20;
+    }
+    .violin-accent-line { border-left: 2px solid rgba(214,177,95,.65); }
     table { border-collapse: collapse; width: 100%; }
     th { text-align: left; color: #9aa0a6; font-weight: 500; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,.08); }
     td { padding: 0.65rem 0.75rem; font-size: 0.875rem; color: #d1d5db; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: top; }
@@ -211,7 +228,14 @@
         </div>
         <span class="text-lg">YY Method™</span>
       </div>
-      <nav class="ml-auto flex items-center gap-6 text-sm text-gray-600">
+      <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
+        <a href="#what-is-the-yy-method" class="hover:text-gray-300 transition-colors">Method</a>
+        <details class="nav-menu">
+          <summary class="hover:text-gray-300 transition-colors">Applications</summary>
+          <div class="nav-menu-panel">
+            <a href="/violin/" class="block rounded-lg px-3 py-2 text-gray-400 hover:bg-white/5 hover:text-gray-200 transition-colors">Violin Practice</a>
+          </div>
+        </details>
         <a href="https://home.yymethod.com" target="_blank" rel="noopener" class="hover:text-gray-300 transition-colors">Cases & Reasoning</a>
         <a href="https://benchantech.com" target="_blank" rel="noopener" class="hover:text-gray-300 transition-colors">Ben Chan</a>
       </nav>
@@ -596,6 +620,25 @@
     </div>
   </section>
 
+  <!-- Applied Fields -->
+  <div class="mx-auto max-w-3xl px-6 divider"></div>
+  <section id="applications" class="mx-auto max-w-3xl px-6 py-10">
+    <div class="glass rounded-xl p-6 violin-accent-line">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-3">Applied in Practice</p>
+      <h2 class="text-gray-100 font-semibold text-lg tracking-tight">YY Method™ for Violin</h2>
+      <p class="text-gray-400 text-sm leading-relaxed mt-3">
+        A public application of the method for violinists:
+        turn uncertain practice moments into clearer experiments,
+        better teacher questions, and useful practice memory.
+      </p>
+      <a
+        href="/violin/?utm_source=yymethod.com&utm_medium=internal&utm_campaign=applications&utm_content=homepage_violin_card"
+        onclick="window.gtag && gtag('event','homepage_violin_application_click')"
+        class="inline-flex mt-5 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors"
+      >Explore the violin application →</a>
+    </div>
+  </section>
+
   <!-- Public Notice -->
   <div class="mx-auto max-w-3xl px-6 divider"></div>
   <section class="mx-auto max-w-3xl px-6 py-10">
@@ -623,6 +666,8 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
         <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+        <span class="text-gray-700">·</span>
+        <a href="/violin/" onclick="window.gtag && gtag('event','footer_violin_application_click')" class="hover:text-gray-400 transition-colors">Violin Practice</a>
         <span class="text-gray-700">·</span>
         <a href="https://benchantech.com" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Ben Chan Tech LLC</a>
       </div>

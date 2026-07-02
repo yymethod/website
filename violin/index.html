@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YY Method™ for Violin | Ben Chan</title>
+  <meta name="description" content="A violin-specific application of YY Method™ for turning stuck practice moments into clear experiments, better teacher questions, and useful practice memory." />
+  <meta property="og:title" content="YY Method™ for Violin" />
+  <meta property="og:description" content="Keep the useful parts of practice from disappearing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yymethod.com/violin/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #0a0b0f;
+      --fg: #e5e7eb;
+      --muted: #9aa0a6;
+      --violin-accent: #d6b15f;
+      --violin-accent-bright: #f3d68a;
+      --violin-wood: #7a351f;
+      --violin-rosin: #c9914b;
+    }
+    html { scroll-behavior: smooth; }
+    html, body { background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid rgba(243,214,138,.8); outline-offset: 4px; border-radius: .35rem; }
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.08); }
+    .ring-fine { box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+    .shadow-soft { box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+    .divider { border-top: 1px solid rgba(255,255,255,.07); }
+    .nav-menu { position: relative; }
+    .nav-menu summary { list-style: none; cursor: pointer; }
+    .nav-menu summary::-webkit-details-marker { display: none; }
+    .nav-menu[open] summary { color: #d1d5db; }
+    .nav-menu-panel {
+      position: absolute;
+      right: 0;
+      top: calc(100% + .75rem);
+      min-width: 13rem;
+      padding: .5rem;
+      border-radius: .75rem;
+      background: rgba(10,11,15,.96);
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      z-index: 20;
+    }
+    .eyebrow {
+      font-family: "Courier New", Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .72rem;
+      color: #8b929d;
+      font-weight: 700;
+    }
+    .artifact {
+      background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(214,177,95,.1), rgba(255,255,255,.025));
+      background-size: 100% 1.75rem, 100% 100%;
+      border: 1px solid rgba(214,177,95,.22);
+    }
+    .hero-motif {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(214,177,95,.12), transparent 28%),
+        linear-gradient(110deg, transparent 0 42%, rgba(214,177,95,.18) 42.2% 42.8%, transparent 43% 100%),
+        repeating-linear-gradient(0deg, transparent 0 1.35rem, rgba(255,255,255,.035) 1.37rem 1.43rem);
+    }
+    .chip { border: 1px solid rgba(214,177,95,.18); background: rgba(214,177,95,.055); }
+    .method-card { transition: border-color .18s ease, transform .18s ease, background .18s ease; }
+    .method-card:hover { border-color: rgba(214,177,95,.32); background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); }
+    .emphasized { border-color: rgba(214,177,95,.48); box-shadow: inset 2px 0 0 rgba(214,177,95,.72); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8N8TQFK8X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B8N8TQFK8X');
+    gtag('event', 'violin_page_view');
+    function track(eventName) {
+      if (window.gtag) gtag('event', eventName);
+    }
+  </script>
+</head>
+<body>
+  <header class="w-full">
+    <div class="mx-auto max-w-7xl px-6 py-6 flex items-center">
+      <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
+        <div class="h-10 w-10 rounded-xl overflow-hidden ring-fine shadow-soft bg-white/5">
+          <img src="/assets/images/favicon-256x256.png" alt="YY mark" class="h-full w-full object-contain" />
+        </div>
+        <span class="text-lg">YY Method™</span>
+      </a>
+      <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
+        <a href="/#what-is-the-yy-method" class="hover:text-gray-300 transition-colors">Method</a>
+        <details class="nav-menu">
+          <summary class="hover:text-gray-300 transition-colors">Applications</summary>
+          <div class="nav-menu-panel">
+            <a href="/violin/" class="block rounded-lg px-3 py-2 text-gray-200 bg-white/5">Violin Practice</a>
+          </div>
+        </details>
+        <a href="https://studio.com/ben-chan/violin-db8992?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=nav" target="_blank" rel="noopener" onclick="track('violin_studio_app_click')" class="hidden sm:inline hover:text-gray-300 transition-colors">Violin Companion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-7xl px-6 pt-10 pb-14">
+      <nav class="mb-8 text-xs text-gray-600" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-gray-300 transition-colors">YY Method™</a>
+        <span class="mx-2">/</span>
+        <a href="/#applications" class="hover:text-gray-300 transition-colors">Applications</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-400">Violin</span>
+      </nav>
+      <div class="grid lg:grid-cols-[1fr_.86fr] gap-10 lg:gap-16 items-center">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-amber-200/70">YY Method™ / Applications / Violin</p>
+          <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Keep the useful parts of practice from disappearing.</h1>
+          <p class="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl">
+            A violin-specific application of YY Method™ for turning a stuck practice moment into one clear experiment, a better question, and a record of what actually helped.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="https://studio.com/ben-chan/violin-db8992?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=hero" target="_blank" rel="noopener" onclick="track('violin_hero_cta_click'); track('violin_studio_app_click')" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-amber-100 transition-colors">Apply it in Violin Companion</a>
+            <a href="#practice-loop" onclick="track('violin_secondary_cta_click')" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-amber-200/40 hover:text-amber-100 transition-colors">See the practice loop</a>
+          </div>
+          <p class="mt-5 text-sm text-gray-500">Human first. AI second. Musical judgment stays with the player.</p>
+        </div>
+        <div class="hero-motif glass rounded-2xl p-5 md:p-7 shadow-soft">
+          <div class="artifact rounded-xl p-5 md:p-6">
+            <p class="eyebrow text-amber-200/70">Practice Note / 2026-07-02</p>
+            <p class="mt-5 text-gray-100 text-xl leading-relaxed font-semibold">
+              Shift into third position settled more often when the bow stayed quieter before the move.
+            </p>
+            <div class="mt-6 grid gap-3 text-sm">
+              <p><span class="text-gray-500">Status:</span> <span class="text-gray-300">retest tomorrow</span></p>
+              <p><span class="text-gray-500">Open question:</span> <span class="text-gray-300">Is thumb release still late?</span></p>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip rounded-full px-3 py-1 text-xs text-amber-100/80">one variable changed</span>
+            <span class="chip rounded-full px-3 py-1 text-xs text-amber-100/80">context preserved</span>
+            <span class="chip rounded-full px-3 py-1 text-xs text-amber-100/80">teacher question ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">The Problem</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The hard part is not always practicing more.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>Most violinists already know to slow down, isolate, listen, repeat, and be patient. The harder problem is knowing what kind of problem they are actually looking at.</p>
+        <p>A shift misses only in context. The bow suddenly feels different near the frog. A phrase loses shape under pressure. A teacher's instruction made sense yesterday and is gone today.</p>
+        <p class="text-gray-300">In those moments, more repetition can become noise. What helps is a way to notice clearly, test one useful thing, and keep the clue before it disappears.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-xl p-5"><p class="eyebrow">You Notice</p><p class="mt-3 text-sm text-gray-300">Something changes, resists, or falls apart.</p></div>
+        <div class="glass rounded-xl p-5"><p class="eyebrow">You Guess</p><p class="mt-3 text-sm text-gray-300">More repetition? Different bow speed? Setup? Tension? Ask a teacher?</p></div>
+        <div class="glass rounded-xl p-5"><p class="eyebrow">You Need a Method</p><p class="mt-3 text-sm text-gray-300">Not a diagnosis. A way to test one useful thing without losing the musical thread.</p></div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section id="practice-loop" class="mx-auto max-w-5xl px-6 py-12">
+      <div class="max-w-3xl">
+        <p class="eyebrow">The Method</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight">A small loop for uncertain practice moments.</h2>
+        <p class="mt-5 text-sm leading-relaxed text-gray-400">The parent YY Method™ preserves reasoning, not just results. At the violin stand, that becomes a way to keep musical discoveries honest enough to reuse.</p>
+      </div>
+      <div class="mt-8 grid lg:grid-cols-2 gap-4">
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">01 / Capture</p>
+          <h3 class="mt-3 text-lg font-semibold">What do I notice?</h3>
+          <p class="mt-3 text-sm text-gray-400">State what happened before explaining it.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• “The shift misses when I arrive from below.”</li><li>• “The bow starts bouncing near the frog.”</li><li>• “My hand feels different after ten minutes.”</li><li>• “My teacher's note made sense in the lesson but disappeared at home.”</li></ul>
+        </article>
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">02 / Why</p>
+          <h3 class="mt-3 text-lg font-semibold">What might be contributing?</h3>
+          <p class="mt-3 text-sm text-gray-400">Consider possibilities without pretending you know the answer yet.</p>
+          <p class="mt-4 text-sm text-gray-400">timing · bow speed or contact point · left-hand frame · musical intention · fatigue · setup · unclear feedback</p>
+        </article>
+        <article class="method-card emphasized glass rounded-xl p-6">
+          <p class="eyebrow text-amber-200/70">03 / Why-Not</p>
+          <h3 class="mt-3 text-lg font-semibold">What should I not conclude too quickly?</h3>
+          <p class="mt-3 text-sm text-gray-400">This is the safeguard. A useful clue is not automatically a complete explanation.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• Do not assume you are simply “bad at shifting.”</li><li>• Do not assume one successful attempt proves the cause.</li><li>• Do not assume repetition alone will solve it.</li><li>• Do not assume equipment is the problem, but do not ignore setup if the evidence points there.</li></ul>
+        </article>
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">04 / Commit</p>
+          <h3 class="mt-3 text-lg font-semibold">What is the smallest useful experiment?</h3>
+          <p class="mt-3 text-sm text-gray-400">Change one variable. Keep the rest as stable as possible.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• Change only bow speed.</li><li>• Keep the rhythm but remove the left hand.</li><li>• Test the shift with a guide finger.</li><li>• Play the phrase once for sound rather than accuracy.</li><li>• Bring one focused question to a teacher.</li></ul>
+        </article>
+        <article class="method-card glass rounded-xl p-6 lg:col-span-2">
+          <p class="eyebrow text-gray-500">05 / Timestamp</p>
+          <h3 class="mt-3 text-lg font-semibold">What changed, and is it worth keeping?</h3>
+          <p class="mt-3 text-sm text-gray-400">Save the conditions, not just the conclusion.</p>
+          <p class="mt-4 text-sm text-gray-400">“This helped only at slow tempo.” · “The sound improved but rhythm became less stable.” · “This needs a teacher.” · “Retest tomorrow in the actual passage.”</p>
+        </article>
+      </div>
+      <aside class="mt-6 glass rounded-xl p-5 text-sm text-gray-400 border-amber-200/20">A timestamp is not just a date. It marks the context that could make the clue stop being true.</aside>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">What This Looks Like</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">A useful note is specific enough to revisit.</h2>
+      <div class="mt-8 grid lg:grid-cols-[1fr_.55fr] gap-6 items-start">
+        <div class="artifact rounded-xl p-6">
+          <p class="eyebrow text-amber-200/70">Practice Artifact</p>
+          <p class="mt-2 text-sm text-gray-500">July 2, 2026 · Bach Partita No. 2 · Chaconne</p>
+          <dl class="mt-6 grid gap-4 text-sm">
+            <div><dt class="text-gray-200 font-semibold">Capture</dt><dd class="mt-1 text-gray-400">Shift to third position was late only when I arrived from the lower string.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Why</dt><dd class="mt-1 text-gray-400">Possibly rushing the bow change before the shift.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Why-Not</dt><dd class="mt-1 text-gray-400">Could also be left-hand anticipation or the phrase becoming too tense in context.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Commit</dt><dd class="mt-1 text-gray-400">Test once with a quieter bow before the move. Do not change fingering yet.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Timestamp</dt><dd class="mt-1 text-gray-400">Helped at slow tempo. Retest in the full phrase tomorrow.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Teacher question</dt><dd class="mt-1 text-gray-400">Does the thumb release need to happen earlier?</dd></div>
+          </dl>
+        </div>
+        <p class="glass rounded-xl p-6 text-sm leading-relaxed text-gray-400">The goal is not to create paperwork. It is to preserve enough context that tomorrow's practice does not start from zero.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Boundaries</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">It protects the player from false certainty.</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow">Not This</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• A diagnosis engine</li><li>• A rigid curriculum</li><li>• A generic practice checklist</li><li>• A replacement for a teacher</li><li>• A promise that one exercise fixes a problem</li><li>• A reason to override pain, discomfort, or setup concerns</li></ul>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow text-amber-200/70">Instead</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• One clear next move</li><li>• A bounded experiment</li><li>• Better evidence</li><li>• A teacher-ready question</li><li>• A clue worth retesting</li><li>• A personal practice record that becomes more useful over time</li></ul>
+        </div>
+      </div>
+      <p class="mt-6 text-sm leading-relaxed text-gray-400 max-w-3xl">Violin Companion should know when not to guess. If a problem points toward pain, setup, equipment, or a teacher's in-person judgment, the correct next move may be to stop testing and bring a better question to the right person.</p>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">How It Fits Together</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Public method. Public teaching. Private practice.</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <article class="glass rounded-xl p-6 flex flex-col">
+          <p class="eyebrow">YY Method™</p>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400 grow">The underlying discipline: capture reasoning, test assumptions, preserve conditions, and mark what may need re-verification.</p>
+          <a href="/" onclick="track('violin_parent_method_click')" class="mt-5 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors">Read the full method →</a>
+        </article>
+        <article class="glass rounded-xl p-6 flex flex-col">
+          <p class="eyebrow">BenChanViolin</p>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400 grow">Public teaching and performance rooted in real musical problems, repertoire, sound, technique, and practice from inside the room.</p>
+          <a href="https://youtube.com/benchanviolin" target="_blank" rel="noopener" onclick="track('violin_benchanviolin_click')" class="mt-5 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors">Watch BenChanViolin →</a>
+        </article>
+        <article class="glass rounded-xl p-6 flex flex-col">
+          <p class="eyebrow">Violin Companion</p>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400 grow">A private stand partner for applying the method to your own goals, experiments, discoveries, and teacher questions.</p>
+          <a href="https://studio.com/ben-chan/violin-db8992?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=ecosystem" target="_blank" rel="noopener" onclick="track('violin_studio_app_click')" class="mt-5 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors">Apply it at your stand →</a>
+        </article>
+      </div>
+      <p class="mt-6 text-sm leading-relaxed text-gray-500">The broader <a href="/" onclick="track('violin_parent_method_click')" class="text-gray-300 hover:text-amber-100 transition-colors">YY Method™</a> was developed to preserve reasoning under changing conditions. Violin practice is one personal application of that discipline.</p>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-3xl px-6 py-14 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Use the method on your own practice.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400">Violin YY Method is the public framework. Violin Companion helps you apply it privately: name what feels stuck, try one clear next move, notice what changes, and preserve the clues worth bringing back to your next practice session or lesson.</p>
+      <a href="https://studio.com/ben-chan/violin-db8992?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=final_cta" target="_blank" rel="noopener" onclick="track('violin_final_cta_click'); track('violin_studio_app_click')" class="inline-flex mt-8 justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-amber-100 transition-colors">Open Violin Companion</a>
+      <p class="mt-5 text-sm text-gray-500">Built for violinists who want clearer experiments, better questions, and a more useful memory of what actually helps.</p>
+    </section>
+  </main>
+
+  <footer class="mx-auto max-w-7xl px-6 py-8 divider">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+        <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+        <span class="text-gray-700">·</span>
+        <a href="/" class="hover:text-gray-400 transition-colors">YY Method</a>
+        <span class="text-gray-700">·</span>
+        <a href="/violin/" class="hover:text-gray-400 transition-colors">Violin Practice</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      var methodTarget = document.getElementById('practice-loop');
+      var methodSeen = false;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!methodSeen && entry.isIntersecting) {
+            methodSeen = true;
+            track('violin_method_scroll');
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.35 });
+      if (methodTarget) observer.observe(methodTarget);
+    }
+  </script>
+</body>
+</html>
