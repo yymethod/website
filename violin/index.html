@@ -71,6 +71,13 @@
     .method-card { transition: border-color .18s ease, transform .18s ease, background .18s ease; }
     .method-card:hover { border-color: rgba(214,177,95,.32); background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); }
     .emphasized { border-color: rgba(214,177,95,.48); box-shadow: inset 2px 0 0 rgba(214,177,95,.72); }
+    .podcast-embed {
+      width: 100%;
+      min-height: 152px;
+      border: 0;
+      border-radius: .75rem;
+      color-scheme: normal;
+    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
@@ -154,6 +161,24 @@
         <p>Most violinists already know to slow down, isolate, listen, repeat, and be patient. The harder problem is knowing what kind of problem they are actually looking at.</p>
         <p>A shift misses only in context. The bow suddenly feels different near the frog. A phrase loses shape under pressure. A teacher's instruction made sense yesterday and is gone today.</p>
         <p class="text-gray-300">In those moments, more repetition can become noise. What helps is a way to notice clearly, test one useful thing, and keep the clue before it disappears.</p>
+      </div>
+      <div class="mt-8 glass rounded-xl p-4 md:p-5">
+        <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+          <div>
+            <p class="eyebrow text-amber-200/70">YY and Me / Episode 2</p>
+            <h3 class="mt-2 text-lg font-semibold tracking-tight">Practicing</h3>
+          </div>
+          <a href="https://yyandme.benchantech.com" target="_blank" rel="noopener" class="text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors">Full podcast →</a>
+        </div>
+        <iframe
+          data-testid="embed-iframe"
+          class="podcast-embed"
+          src="https://open.spotify.com/embed/episode/05yi4vaGyDv8SWzIdqw1JR?utm_source=generator"
+          allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="YY and Me Episode 2: Practicing">
+        </iframe>
       </div>
       <div class="mt-8 grid md:grid-cols-3 gap-4">
         <div class="glass rounded-xl p-5"><p class="eyebrow">You Notice</p><p class="mt-3 text-sm text-gray-300">Something changes, resists, or falls apart.</p></div>
