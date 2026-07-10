@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YY Method™ for Professional Work | Knowledge Systems</title>
+  <meta name="description" content="A public framework for extracting, structuring, and preserving the reasoning behind decisions — durable knowledge artifacts readable by both humans and AI systems." />
+  <link rel="icon" href="/assets/images/favicon-256x256.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --bg:#0a0b0f; --fg:#e5e7eb; --muted:#9aa0a6; --accent:#a5b4fc; --accent-bright:#c7d2fe; --ink:#9ec1e6; }
+    html { scroll-behavior: smooth; }
+    html, body { background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid rgba(165,180,252,.8); outline-offset: 4px; border-radius: .35rem; }
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.08); }
+    .ring-fine { box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+    .shadow-soft { box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+    .divider { border-top: 1px solid rgba(255,255,255,.07); }
+    .nav-menu { position: relative; }
+    .nav-menu summary { list-style: none; cursor: pointer; }
+    .nav-menu summary::-webkit-details-marker { display: none; }
+    .nav-menu[open] summary { color: #d1d5db; }
+    .nav-menu-panel { position:absolute; right:0; top:calc(100% + .75rem); min-width:13rem; padding:.5rem; border-radius:.75rem; background:rgba(10,11,15,.96); border:1px solid rgba(255,255,255,.1); box-shadow:0 20px 40px rgba(0,0,0,.45); z-index:20; }
+    .eyebrow { font-family:"Courier New",Courier,monospace; text-transform:uppercase; letter-spacing:.08em; font-size:.72rem; color:#8b929d; font-weight:700; }
+    .artifact {
+      background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(165,180,252,.09), rgba(255,255,255,.025));
+      background-size: 100% 1.75rem, 100% 100%;
+      border: 1px solid rgba(165,180,252,.22);
+    }
+    .hero-motif {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(165,180,252,.12), transparent 28%),
+        linear-gradient(110deg, transparent 0 42%, rgba(165,180,252,.16) 42.2% 42.8%, transparent 43% 100%),
+        repeating-linear-gradient(0deg, transparent 0 1.35rem, rgba(255,255,255,.035) 1.37rem 1.43rem);
+    }
+    .chip { border: 1px solid rgba(165,180,252,.2); background: rgba(165,180,252,.06); }
+    .method-card { transition: border-color .18s ease, transform .18s ease, background .18s ease; }
+    .method-card:hover { border-color: rgba(165,180,252,.32); background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); }
+    .emphasized { border-color: rgba(165,180,252,.48); box-shadow: inset 2px 0 0 rgba(165,180,252,.72); }
+    table { border-collapse: collapse; width: 100%; }
+    th { text-align:left; color:#9aa0a6; font-weight:500; font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; padding:.5rem .75rem; border-bottom:1px solid rgba(255,255,255,.08); }
+    td { padding:.65rem .75rem; font-size:.875rem; color:#d1d5db; border-bottom:1px solid rgba(255,255,255,.05); vertical-align:top; }
+    td:first-child { color:#e5e7eb; font-weight:500; white-space:nowrap; }
+    .loop-block { font-family:'Courier New',Courier,monospace; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:.75rem; padding:1rem 1.25rem; font-size:.875rem; letter-spacing:.04em; color:#a5b4fc; }
+    /* human ink */
+    .ink { font-family:'Caveat',cursive; color:var(--ink); font-size:1.22rem; line-height:1.32; font-weight:600; }
+    .note { position:relative; display:block; padding-left:1.15rem; }
+    .note::before { content:""; position:absolute; left:0; top:.35rem; width:2px; height:calc(100% - .5rem); background:linear-gradient(180deg, rgba(158,193,230,.75), rgba(158,193,230,.15)); border-radius:2px; }
+    .note .by { display:block; font-family:'Courier New',monospace; font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:#5f6772; margin-top:.4rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8N8TQFK8X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B8N8TQFK8X');
+    gtag('event', 'work_page_view');
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CreativeWork", "DefinedTerm"],
+      "@id": "https://home.yymethod.com/#yy-method-home",
+      "name": "YY Method Home Edition",
+      "url": "https://home.yymethod.com/",
+      "description": "YY Method Home Edition is the applied home and case-registry track of the YY Method.",
+      "creator": { "@id": "https://benchantech.com/#person" },
+      "publisher": { "@id": "https://benchantech.com/#organization" },
+      "isPartOf": { "@id": "https://yymethod.com/#yy-method" },
+      "about": { "@id": "https://yymethod.com/#yy-method" },
+      "mainEntityOfPage": { "@id": "https://home.yymethod.com/#webpage" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://home.yymethod.com/#website",
+      "name": "YY Method Home",
+      "url": "https://home.yymethod.com/",
+      "creator": { "@id": "https://benchantech.com/#person" },
+      "about": { "@id": "https://home.yymethod.com/#yy-method-home" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://home.yymethod.com/#webpage",
+      "url": "https://home.yymethod.com/",
+      "name": "YY Method Home Edition",
+      "isPartOf": { "@id": "https://home.yymethod.com/#website" },
+      "mainEntity": { "@id": "https://home.yymethod.com/#yy-method-home" }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YY Method™ for Professional Work",
+    "url": "https://yymethod.com/work/",
+    "description": "A public framework for extracting, structuring, and preserving the reasoning behind decisions — durable knowledge artifacts readable by both humans and AI systems.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://benchantech.com/#person",
+      "name": "Ben Chan"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@id": "https://yymethod.com/work/#yy-method",
+    "@type": "DefinedTerm",
+    "name": "YY Method",
+    "description": "A personal professional methodology for extracting, structuring, and preserving institutional knowledge — specifically the reasoning behind decisions — into structured artifacts readable by both humans and AI systems. The core loop: Capture → Why → Why-Not → Commit → Timestamp. Developed by Ben Chan.",
+    "url": "https://yymethod.com/work/",
+    "author": {
+      "@type": "Person",
+      "@id": "https://benchantech.com/#person",
+      "name": "Ben Chan"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the YY Method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method is a personal professional methodology for extracting, structuring, and preserving institutional knowledge — specifically the reasoning behind decisions that normally exists only inside people's heads. Developed by Ben Chan, it uses a five-step loop (Capture → Why → Why-Not → Commit → Timestamp) to produce structured knowledge artifacts that are durable, queryable, and readable by both humans and AI systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'Human first, AI second' mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the YY Method, 'human first, AI second' is the governing principle for AI integration: humans extract and encode knowledge first; AI reads and operates against those artifacts second. AI is not used to draft knowledge artifacts — it synthesizes, cross-references, and generates questions against human-captured content. Human captures → AI reads. Not: AI drafts → human reviews. The second sequence looks like efficiency; it is a quality inversion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you use the YY Method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method uses a five-step loop: 1. Capture — state what is actually known, including what lives only in someone's head. 2. Why — record the reasoning behind the decision. 3. Why-Not — record what was considered and rejected, and what the decision depends on being true. 4. Commit — encode into a structured, queryable artifact. 5. Timestamp — mark when captured and define the specific expiration condition. The Why-Not step is non-optional and is what separates YY artifacts from ordinary documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the YY Method core loop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method core loop is: Capture → Why → Why-Not → Commit → Timestamp. Each artifact moves through these five stages, producing a structured reasoning chain that captures not only what was decided but the constraints, rejected alternatives, and a defined freshness boundary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is YY Method AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The YY Method's approach to AI is 'human first, AI second.' After human capture, AI can synthesize, cross-reference, flag inconsistencies, and query across the full artifact set. In a hierarchical knowledge system, AI's active role is question generation: when an upstream artifact changes, AI identifies affected downstream nodes and surfaces the specific questions a human must answer to re-verify each one. The method is specifically designed to make AI systems trustworthy by grounding them in human-authored knowledge artifacts, not AI-generated summaries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between the YY Method and standard documentation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard documentation records what is. The YY Method records what is, what was considered against it, and what the decision depends on. The Why-Not step — capturing rejected alternatives and breaking conditions — is what separates YY artifacts from ordinary documentation. Documentation fed to AI without this structure produces hallucinations; YY artifacts are designed to make AI responses trustworthy."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the YY Method",
+    "description": "The five-step loop for creating YY Method knowledge artifacts that preserve the reasoning behind decisions for both human and AI consumption.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://benchantech.com/#person",
+      "name": "Ben Chan"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": "1",
+        "name": "Capture",
+        "text": "State what is actually known about a system, decision, or constraint. Not what the documentation says. What is actually true, including what lives only in someone's head."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "2",
+        "name": "Why",
+        "text": "Record why the decision was made, why the system works the way it does, why the constraint exists. This is the first branch."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "3",
+        "name": "Why-Not",
+        "text": "Record what was considered and rejected, what the decision depends on being true, what would break it. This is the inversion step. It is not optional."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "4",
+        "name": "Commit",
+        "text": "Encode the result into a structured artifact: a reasoning chain that can be queried. A durable, timestamped act of record."
+      },
+      {
+        "@type": "HowToStep",
+        "position": "5",
+        "name": "Timestamp",
+        "text": "Mark when this was captured, by whom, under what conditions. Include a defined expiration condition: the specific event that would make this artifact stale. Without this, a freshness marker is theater."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- SITE-HEADER:START -->
+<header class="w-full sticky top-0 z-30" style="background:rgba(10,11,15,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05)">
+  <div class="mx-auto max-w-7xl px-6 py-6 flex items-center">
+    <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
+      <div class="h-10 w-10 rounded-xl overflow-hidden ring-fine shadow-soft bg-white/5">
+        <img src="/assets/images/favicon-256x256.png" alt="YY mark" class="h-full w-full object-contain" />
+      </div>
+      <span class="text-lg">YY Method™</span>
+    </a>
+    <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
+      <a href="/#doctrine" class="hover:text-gray-300 transition-colors">Doctrine</a>
+      <a href="/work/" class="text-indigo-300/80 hover:text-indigo-200 transition-colors">Professional Work</a>
+      <a href="/violin/" class="text-amber-200/80 hover:text-amber-100 transition-colors">Violin</a>
+      <a href="https://benchantech.com" target="_blank" rel="noopener" class="hover:text-gray-300 transition-colors">Ben Chan</a>
+    </nav>
+  </div>
+</header>
+<!-- SITE-HEADER:END -->
+
+  <main>
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-6 pt-10 pb-14">
+      <div class="grid lg:grid-cols-[1fr_.86fr] gap-10 lg:gap-16 items-center">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-300/70">YY Method™ / Applications / Professional Work</p>
+          <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Leave the truth behind you.</h1>
+          <p class="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl">
+            YY Method for Professional Work is a public framework for extracting the reasoning behind decisions, testing it against what could break it, and encoding it into artifacts durable enough to survive the people who made them.
+          </p>
+          <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">It is not documentation, not knowledge management, and not a substitute for the engineers, leaders, and judgment that built the system.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#method-loop" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">See the method</a>
+            <a href="/#doctrine" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-indigo-300/40 hover:text-indigo-100 transition-colors">Read the doctrine</a>
+          </div>
+        </div>
+        <div class="hero-motif glass rounded-2xl p-5 md:p-7 shadow-soft">
+          <div class="artifact rounded-xl p-5 md:p-6">
+            <p class="eyebrow text-indigo-300/70">Decision Record / 2026-03-14</p>
+            <p class="mt-5 text-gray-100 text-xl leading-relaxed font-semibold">
+              We chose the queue over direct writes because the vendor API rate-limits under burst load.
+            </p>
+            <div class="mt-6 grid gap-3 text-sm">
+              <p><span class="text-gray-500">Rejected:</span> <span class="text-gray-300">Direct writes — simpler, but fails silently at peak.</span></p>
+              <p><span class="text-gray-500">Stale when:</span> <span class="text-gray-300">The vendor removes the rate limit.</span></p>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip rounded-full px-3 py-1 text-xs text-indigo-100/80">why-not preserved</span>
+            <span class="chip rounded-full px-3 py-1 text-xs text-indigo-100/80">constraint marked</span>
+            <span class="chip rounded-full px-3 py-1 text-xs text-indigo-100/80">freshness boundary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- The Problem -->
+    <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">The Problem</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The hard part is not writing things down.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>The same failure shows up repeatedly across teams and codebases: the reasoning behind why systems were built the way they were, what constraints shaped decisions, how the organization actually thinks — trapped in individuals, undocumented, decaying.</p>
+        <p>When people leave, when projects change hands, when AI tools are introduced, that invisible knowledge becomes a critical liability. A decision made sense in the room and disappeared from the record. A constraint was obvious to the person who hit it and invisible to everyone after.</p>
+        <p class="text-gray-300">More documentation can help. It can also create noise.</p>
+        <p>What helps is a way to keep the reasoning intact: state what is actually true, record why, preserve what was ruled out, mark what would make it stale, and hand it forward in a form both a new engineer and an AI system can read without guessing.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-xl p-5"><p class="eyebrow">Capture</p><p class="mt-3 text-sm text-gray-300">State what is actually true before explaining it.</p></div>
+        <div class="glass rounded-xl p-5"><p class="eyebrow">Invert</p><p class="mt-3 text-sm text-gray-300">Record what was rejected and what it depends on.</p></div>
+        <div class="glass rounded-xl p-5"><p class="eyebrow">Preserve</p><p class="mt-3 text-sm text-gray-300">Mark the freshness boundary without faking certainty.</p></div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- The Professional Relationship -->
+    <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">The Professional Relationship</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The work product stays with the organization. The ability to produce it does not.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>Think of a violinist hired to join a professional orchestra as its concertmaster. She brings her own instrument, her own technique — years of craft developed across many ensembles. The orchestra hires her not because they lack musicians, but because they need someone with the precision and leadership to shape how the whole section sounds.</p>
+        <p>The music she helps produce belongs to the orchestra. When she moves on, the recordings stay. The repertoire stays. The ensemble she helped sharpen stays. Her instrument goes with her. So does her methodology.</p>
+        <p class="text-gray-300">A practitioner's methodology is not the engagement they delivered with it.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- The Method -->
+    <section id="method-loop" class="mx-auto max-w-5xl px-6 py-12">
+      <div class="max-w-3xl">
+        <p class="eyebrow">The Method</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight">YY Method™ preserves reasoning, not just results.</h2>
+        <p class="mt-5 text-sm leading-relaxed text-gray-400">Applied to a codebase or an organization, it becomes a five-step loop for every decision worth keeping.</p>
+      </div>
+      <div class="loop-block text-center my-8 mx-auto max-w-3xl">Capture → Why → Why-Not → Commit → Timestamp</div>
+      <div class="grid lg:grid-cols-2 gap-4">
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">01 / Capture</p>
+          <h3 class="mt-3 text-lg font-semibold">What is actually known?</h3>
+          <p class="mt-3 text-sm text-gray-400">State what is actually true about a system, decision, or constraint — not what the documentation says. Including what lives only in someone's head.</p>
+        </article>
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">02 / Why</p>
+          <h3 class="mt-3 text-lg font-semibold">Why was it decided this way?</h3>
+          <p class="mt-3 text-sm text-gray-400">Record why the decision was made, why the system works the way it does, why the constraint exists. This is the first branch.</p>
+        </article>
+        <article class="method-card emphasized glass rounded-xl p-6">
+          <p class="eyebrow text-indigo-300/70">03 / Why-Not</p>
+          <h3 class="mt-3 text-lg font-semibold">What was considered and rejected?</h3>
+          <p class="mt-3 text-sm text-gray-400">Record what was ruled out, what the decision depends on being true, and what would break it. This is the inversion step. It is not optional — it is what separates a knowledge artifact from documentation.</p>
+        </article>
+        <article class="method-card glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">04 / Commit</p>
+          <h3 class="mt-3 text-lg font-semibold">Encode it into a durable artifact.</h3>
+          <p class="mt-3 text-sm text-gray-400">Encode the result into a structured artifact: a reasoning chain that can be queried. A durable, timestamped act of record.</p>
+        </article>
+        <article class="method-card glass rounded-xl p-6 lg:col-span-2">
+          <p class="eyebrow text-gray-500">05 / Timestamp</p>
+          <h3 class="mt-3 text-lg font-semibold">When was this true, and what would make it stale?</h3>
+          <p class="mt-3 text-sm text-gray-400">Mark when this was captured, by whom, under what conditions. Knowledge has a freshness boundary — not just a date, but a defined expiration condition: the event that would make this artifact stale. Without that, a freshness marker is theater.</p>
+        </article>
+      </div>
+      <aside class="mt-6 glass rounded-xl p-5 text-sm text-gray-400" style="border-color:rgba(165,180,252,.2)">The Why-Not step is what separates this from standard documentation. Standard documentation records what is. The YY Method records what is, what was considered against it, and what it depends on.</aside>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Sample artifact -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">What A Knowledge Artifact Looks Like</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The goal is not a document dump.</h2>
+      <div class="mt-8 grid lg:grid-cols-[1fr_.55fr] gap-6 items-start">
+        <div class="artifact rounded-xl p-6">
+          <p class="eyebrow text-indigo-300/70">Decision Record</p>
+          <p class="mt-2 text-sm text-gray-500">March 14, 2026 · Ingestion pipeline · v2.3</p>
+          <dl class="mt-6 grid gap-4 text-sm">
+            <div><dt class="text-gray-200 font-semibold">What was decided</dt><dd class="mt-1 text-gray-400">Route vendor writes through a durable queue instead of writing directly from the request path.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Why</dt><dd class="mt-1 text-gray-400">The vendor API rate-limits under burst load; direct writes drop silently at peak.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">What was rejected</dt><dd class="mt-1 text-gray-400">Direct writes with client-side retry — simpler, but hides failures and couples latency to the vendor.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">What it depends on</dt><dd class="mt-1 text-gray-400">The vendor keeping a burst rate limit; our tolerance for eventual consistency of ~30s.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Stale when</dt><dd class="mt-1 text-gray-400">The vendor removes the rate limit, or the consistency requirement tightens below 30s.</dd></div>
+            <div><dt class="text-gray-200 font-semibold">Tribal context</dt><dd class="mt-1 text-gray-400">We hit this the hard way in the 2025 launch incident. Ask before "simplifying" it back to direct writes.</dd></div>
+          </dl>
+        </div>
+        <p class="glass rounded-xl p-6 text-sm leading-relaxed text-gray-400">It is to make the next engineer's decisions more intelligent than the last engineer's absence.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Human First AI Second -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Human First. AI Second.</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Human captures. AI reads.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">AI is powerful against well-structured knowledge and destructive against incomplete or ungrounded knowledge. It will hallucinate explanations, infer false intent, and produce confident summaries that are wrong in ways that are hard to detect until something breaks. The hallucinations are coherent. That is what makes them dangerous.</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow">The Human Captures</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• what is actually true</li><li>• the reasoning behind the decision</li><li>• what was considered and rejected</li><li>• what the decision depends on</li><li>• the freshness boundary</li><li>• the tribal context that was never written down</li></ul>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow text-indigo-300/70">The AI Reads</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• synthesizes across the full artifact set</li><li>• cross-references and flags inconsistencies</li><li>• surfaces the questions a change demands</li><li>• generates re-verification prompts</li><li>• never answers those questions itself</li><li>• makes sure they get asked</li></ul>
+        </div>
+      </div>
+      <div class="mt-6 glass rounded-xl p-5">
+        <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold mb-3">The Common Failure Mode</p>
+        <p class="text-gray-400 text-sm leading-relaxed">Someone asks AI to summarize what the team knows before any artifacts exist. The AI produces a plausible summary from code and partial docs. That summary gets treated as a knowledge artifact. It is not — it is an inference with no Why-Not, no constraint marking, no freshness boundary.</p>
+        <p class="text-gray-300 text-sm leading-relaxed mt-3"><span class="text-indigo-300 font-medium">Human captures → AI reads.</span> Not: AI drafts → human reviews. The second sequence looks like efficiency. It is a quality inversion.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Knowledge Hierarchy -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">The Knowledge Hierarchy</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Organizational knowledge is not flat. It should not be stored flat.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">Foundational principles sit at the top of the tree. Decisions descend from them. Implementations descend from decisions. Each node depends on the integrity of what is above it. When a root assumption changes, everything downstream is potentially stale — and the system should say so.</p>
+      <div class="mt-8 glass rounded-xl p-6">
+        <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold mb-3">The Cascade Model</p>
+        <p class="text-gray-400 text-sm leading-relaxed">A change to a founding principle does not silently invalidate six months of downstream decisions. It triggers a structured review: AI identifies what depended on the changed artifact, drafts the questions that need human answers, and holds the downstream nodes as unverified until a human signs off. Nothing is force-updated. Nothing is silently stale.</p>
+        <p class="text-gray-300 text-sm leading-relaxed mt-3">The sequence: <span class="text-indigo-300 font-medium">upstream changes → AI flags dependents → human approves each layer → tree re-stabilizes.</span></p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Compliance Criteria -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Compliance Criteria</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Every artifact is evaluated against six criteria.</h2>
+      <div class="mt-8 glass rounded-xl ring-fine overflow-hidden">
+        <table>
+          <thead><tr><th>Criterion</th><th>What It Requires</th></tr></thead>
+          <tbody>
+            <tr><td>Compression</td><td>Distills to the essential reasoning chain — not a documentation dump</td></tr>
+            <tr><td>Scars</td><td>Iteration history is visible; earlier versions and corrections preserved, not erased</td></tr>
+            <tr><td>Survivability</td><td>Holds under personnel turnover, organizational change, and time</td></tr>
+            <tr><td>Explainability</td><td>Legible to a new engineer without supplemental context from the original author</td></tr>
+            <tr><td>Timestamping</td><td>When captured, when last verified, when conditions changed</td></tr>
+            <tr><td>Discipline</td><td>Applied consistently — part of a repeatable practice, not a one-off effort</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-6 text-sm">
+        <span class="text-gray-300 font-medium">6/6 <span class="text-gray-500 font-normal">= compliant</span></span>
+        <span class="text-gray-400">4–5/6 <span class="text-gray-500">= salvage</span></span>
+        <span class="text-gray-500">≤3/6 <span class="text-gray-600">= discard or redo</span></span>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Artifact Security & Custody -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Artifact Security &amp; Knowledge Custody</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The rule: artifacts live outside commits.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">Knowledge artifacts are organizational assets. They contain extracted reasoning, historical constraints, and tribal context that took years to accumulate and hours to encode. A repository is a shared, versioned, often-connected surface — any artifact committed to it is one misconfiguration away from exposure.</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6"><p class="text-gray-200 font-medium text-sm">Keystores with encryption</p><p class="mt-2 text-sm text-gray-400 leading-relaxed">Artifacts stored in encrypted containers on local machines or secure internal systems, never committed in plaintext.</p></div>
+        <div class="glass rounded-xl p-6"><p class="text-gray-200 font-medium text-sm">Access control by role</p><p class="mt-2 text-sm text-gray-400 leading-relaxed">Organizational heads and designated practitioners hold the decryption credentials. Access is scoped, not broadcast.</p></div>
+        <div class="glass rounded-xl p-6"><p class="text-gray-200 font-medium text-sm">AI-local context, not cloud training data</p><p class="mt-2 text-sm text-gray-400 leading-relaxed">Artifacts load as local context for a session — grounding the AI without transmitting to external systems.</p></div>
+        <div class="glass rounded-xl p-6"><p class="text-gray-200 font-medium text-sm">Separation from the codebase</p><p class="mt-2 text-sm text-gray-400 leading-relaxed">The repo holds code and public materials. Captured knowledge lives elsewhere, secured separately, never in commit history.</p></div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- What This Is Not -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">What This Method Is Not</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">It is the preservation and structure of reasoning — not content, process, or capability.</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow">This method is not</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• standard documentation</li><li>• knowledge management</li><li>• software architecture</li><li>• AI enablement tooling</li><li>• an onboarding system</li><li>• general consulting know-how</li></ul>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow text-indigo-300/70">It preserves instead</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• the reasoning behind decisions</li><li>• the constraints that shaped them</li><li>• the alternatives that were rejected</li><li>• the assumptions they depend on</li><li>• the freshness boundary of each</li><li>• the tribal context that wasn't written down</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Provenance / Tracks -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Provenance &amp; Tracks</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Two tracks. One lineage.</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6 flex flex-col gap-3 opacity-70">
+          <div class="flex items-center justify-between">
+            <p class="text-gray-300 font-semibold text-sm">YY Method (Professional)</p>
+            <span class="flex items-center gap-1.5 text-xs text-gray-500 font-mono"><span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>in professional use</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">The organizational track — carried into professional practice as a company asset. Independent development of this track is closed at v2.3. The practitioner retains the right to apply this version in advisory roles.</p>
+          <p class="text-gray-600 text-xs font-mono">independent lineage closed March 2026</p>
+        </div>
+        <div class="glass rounded-xl p-6 flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <p class="text-gray-200 font-semibold text-sm">YY Method Home</p>
+            <span class="flex items-center gap-1.5 text-xs text-emerald-600 font-mono"><span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-700"></span>active</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">The personal track — applying the method to individual domains requiring judgment under constraints: tax strategy, system design, creative work, and life architecture.</p>
+          <a href="https://home.yymethod.com" target="_blank" rel="noopener" class="mt-1 self-start text-xs font-mono text-indigo-400/80 hover:text-indigo-300 transition-colors">home.yymethod.com →</a>
+        </div>
+      </div>
+      <p class="text-gray-500 text-xs leading-relaxed mt-6 max-w-3xl">Human authorship: method, structure, and all core content by Ben Chan. AI role: formatting, compression, structural consistency — subordinate throughout. Chain: continuous from v1.0 (August 6, 2025) through v2.3, version-controlled and signed.</p>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Public Notice -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <div class="glass rounded-xl p-6 md:p-8" style="border-color: rgba(165,180,252,.2);">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-300/70 mb-4">Public Notice</h2>
+        <p class="text-gray-300 text-sm leading-relaxed">The YY Method's professional track enters formal professional use at v2.3, March 2026 — carried into a professional engagement as an organizational asset. Independent development of that track does not continue. The practitioner retains the right to apply v2.3 in advisory and consulting roles; the boundary is what was developed to this point.</p>
+        <p class="text-gray-400 text-sm leading-relaxed mt-4">The Home track is retained as independent personal intellectual property. It is teachable and licensable at the practitioner's discretion.</p>
+        <p class="text-gray-500 text-sm leading-relaxed mt-4">The public record — v1.0 through v2.3, version-controlled and signed — stands as the complete independent professional lineage.</p>
+        <p class="text-gray-600 text-sm mt-5">— Ben Chan, March 2026</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- How It Fits Together -->
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">How It Fits Together</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Doctrine, professional practice, and applications.</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <article class="glass rounded-xl p-6 flex flex-col">
+          <p class="eyebrow">YY Method™</p>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400 grow">The underlying doctrine: make judgment survive probability through inspectable loops of hypothesis, opposition, action, and preserved context.</p>
+          <a href="/#doctrine" class="mt-5 text-xs font-mono text-indigo-300/80 hover:text-indigo-200 transition-colors">Read the doctrine →</a>
+        </article>
+        <article class="glass rounded-xl p-6 flex flex-col">
+          <p class="eyebrow">Violin Practice</p>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400 grow">A public application of the method for violinists: clearer experiments, better teacher questions, and useful practice memory.</p>
+          <a href="/violin/?utm_source=yymethod.com&utm_medium=internal&utm_campaign=applications&utm_content=work_page_card" onclick="window.gtag && gtag('event','work_violin_application_click')" class="mt-5 text-xs font-mono text-indigo-300/80 hover:text-indigo-200 transition-colors">Inspect the violin application →</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <!-- Final CTA -->
+    <section class="mx-auto max-w-3xl px-6 py-14 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Encode the reasoning before it walks out the door.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400">YY Method is the public framework. The professional track applies it inside organizations — extracting reasoning, marking what breaks it, and encoding artifacts durable enough to survive the people who made them.</p>
+      <a href="/#doctrine" class="inline-flex mt-8 justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Read the doctrine</a>
+      <p class="mt-5 text-sm text-gray-500">Built for teams that want their decisions to remain legible after the people who made them are gone.</p>
+    </section>
+  </main>
+
+  <!-- SITE-FOOTER:START -->
+<footer class="mx-auto max-w-7xl px-6 py-8 divider">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+      <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
+      <a href="https://github.com/yymethod/website/blob/main/VERIFY.md" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-400 transition-colors text-xs ml-1" title="Verify signing key">verify</a>
+    </div>
+  </div>
+</footer>
+<!-- SITE-FOOTER:END -->
+</body>
+</html>

@@ -9,6 +9,7 @@
   <meta property="og:description" content="Keep the thread of practice alive." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yymethod.com/violin/" />
+  <link rel="icon" href="/assets/images/favicon-256x256.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,26 +97,24 @@
   </script>
 </head>
 <body>
-  <header class="w-full">
-    <div class="mx-auto max-w-7xl px-6 py-6 flex items-center">
-      <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
-        <div class="h-10 w-10 rounded-xl overflow-hidden ring-fine shadow-soft bg-white/5">
-          <img src="/assets/images/favicon-256x256.png" alt="YY mark" class="h-full w-full object-contain" />
-        </div>
-        <span class="text-lg">YY Method™</span>
-      </a>
-      <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
-        <a href="/#what-is-the-yy-method" class="hover:text-gray-300 transition-colors">Method</a>
-        <details class="nav-menu">
-          <summary class="hover:text-gray-300 transition-colors">Applications</summary>
-          <div class="nav-menu-panel">
-            <a href="/violin/" class="block rounded-lg px-3 py-2 text-gray-200 bg-white/5">Violin Practice</a>
-          </div>
-        </details>
-        <a href="https://studio.com/ben-chan/6a40f929-6e30-41ae-8957-f8d6b6fd9b6a?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=nav" target="_blank" rel="noopener" onclick="track('violin_studio_app_click')" class="hidden sm:inline hover:text-gray-300 transition-colors">Violin Stand Partner</a>
-      </nav>
-    </div>
-  </header>
+  <!-- SITE-HEADER:START -->
+<header class="w-full sticky top-0 z-30" style="background:rgba(10,11,15,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05)">
+  <div class="mx-auto max-w-7xl px-6 py-6 flex items-center">
+    <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
+      <div class="h-10 w-10 rounded-xl overflow-hidden ring-fine shadow-soft bg-white/5">
+        <img src="/assets/images/favicon-256x256.png" alt="YY mark" class="h-full w-full object-contain" />
+      </div>
+      <span class="text-lg">YY Method™</span>
+    </a>
+    <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
+      <a href="/#doctrine" class="hover:text-gray-300 transition-colors">Doctrine</a>
+      <a href="/work/" class="text-indigo-300/80 hover:text-indigo-200 transition-colors">Professional Work</a>
+      <a href="/violin/" class="text-amber-200/80 hover:text-amber-100 transition-colors">Violin</a>
+      <a href="https://benchantech.com" target="_blank" rel="noopener" class="hover:text-gray-300 transition-colors">Ben Chan</a>
+    </nav>
+  </div>
+</header>
+<!-- SITE-HEADER:END -->
 
   <main>
     <section class="mx-auto max-w-7xl px-6 pt-10 pb-14">
@@ -363,23 +362,22 @@
     </section>
   </main>
 
-  <footer class="mx-auto max-w-7xl px-6 py-8 divider">
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
-        <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
-        <span class="text-gray-700">·</span>
-        <a href="/" class="hover:text-gray-400 transition-colors">YY Method</a>
-        <span class="text-gray-700">·</span>
-        <a href="/violin/" class="hover:text-gray-400 transition-colors">Violin Practice</a>
-      </div>
-      <div class="flex items-center gap-2">
-        <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-        </svg>
-        <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
-      </div>
+  <!-- SITE-FOOTER:START -->
+<footer class="mx-auto max-w-7xl px-6 py-8 divider">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+      <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
     </div>
-  </footer>
+    <div class="flex items-center gap-2">
+      <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
+      <a href="https://github.com/yymethod/website/blob/main/VERIFY.md" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-400 transition-colors text-xs ml-1" title="Verify signing key">verify</a>
+    </div>
+  </div>
+</footer>
+<!-- SITE-FOOTER:END -->
 
   <script>
     if ('IntersectionObserver' in window) {
