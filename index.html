@@ -150,7 +150,10 @@
         <p class="eyebrow text-indigo-300/70">YY Method™ / Doctrine</p>
         <h1 class="mt-5 text-4xl md:text-[3.35rem] font-extrabold leading-[1.05] tracking-tight text-gray-50">A method for preserving judgment inside uncertainty.</h1>
         <p class="mt-6 doc-lede max-w-xl">YY Method™ is a doctrine for governing probabilistic judgment.</p>
-        <p class="mt-4 text-sm text-gray-500 leading-relaxed max-w-xl">It begins from a simple premise: meaningful human work rarely happens under perfect certainty. Its purpose is not to remove uncertainty — it is to make uncertainty usable.</p>
+        <p class="mt-4 text-sm text-gray-500 leading-relaxed max-w-xl">It begins from a simple premise: meaningful human work rarely happens under perfect certainty. Its purpose is not to remove uncertainty. It is to make uncertainty usable.</p>
+        <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xl">The method does this by turning conclusions back into observations, observations into better questions, questions into bounded experiments, and experience into judgment that can be recovered later.</p>
+        <p class="mt-5 text-gray-100 font-semibold leading-relaxed max-w-xl">The question is often the intervention.</p>
+        <p class="mt-3 text-sm text-gray-500 leading-relaxed max-w-xl">A YY-aligned system does not rush to answer an under-defined problem. It asks for the smallest observable piece of evidence that meaningfully reduces uncertainty, then helps the human examine why an explanation may fit, why it may not, and what one provisional move is worth testing.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#doctrine" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Read the doctrine</a>
           <a href="#definition" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-indigo-300/40 hover:text-indigo-100 transition-colors">Jump to the definition</a>
@@ -207,6 +210,29 @@
           <span class="ink">[ pending Ben's actual thoughts ]</span>
           <span class="by">— B.C.</span>
         </div>
+        <div class="note warm">
+          <span class="ink ink-warm">[ pending Ben's actual thoughts ]</span>
+          <span class="by">— B.C.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- The answer is not always the help -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">The Answer Is Not Always the Help</h2>
+        <p class="lead">A fluent answer can resolve uncertainty too quickly.</p>
+        <p>When a person says, “I am getting worse,” “this does not work,” or “something feels wrong,” they have usually offered a conclusion rather than the observations beneath it. An external system can accept that conclusion, infer a plausible cause, and produce an impressive response. It may still be solving the wrong problem.</p>
+        <p>YY Method™ begins one step earlier.</p>
+        <div class="glass rounded-xl p-5 mt-4 font-mono text-[.8rem] leading-relaxed text-indigo-200/80">
+          What happened? · What did you directly observe? · What evidence led you to that interpretation? · What remains uncertain? · What might point toward a different explanation?
+        </div>
+        <p class="mt-5">The purpose is not to delay useful action. It is to prevent premature closure.</p>
+        <p>A good question does not merely collect information for the system. It gives the human another opportunity to notice, discriminate, and judge. The system should perform only the reasoning the human cannot yet perform, not the reasoning the human needs to practice.</p>
+      </div>
+      <aside class="marginalia lg:pt-9">
         <div class="note warm">
           <span class="ink ink-warm">[ pending Ben's actual thoughts ]</span>
           <span class="by">— B.C.</span>
@@ -295,15 +321,35 @@
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
         <h2 class="eyebrow text-gray-500 mb-4">The Core Loop</h2>
-        <p>YY Method™ can be expressed through many operational loops. One simple version is:</p>
-        <ol class="mt-5 space-y-3 text-sm">
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">1</span><span class="text-gray-300"><span class="text-gray-100 font-medium">Capture</span> the current observation.</span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">2</span><span class="text-gray-300">Ask <span class="text-gray-100 font-medium">why it may be true.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">3</span><span class="text-gray-300">Ask <span class="text-gray-100 font-medium">why it may not be true.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">4</span><span class="text-gray-300"><span class="text-gray-100 font-medium">Commit</span> to a provisional next move.</span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">5</span><span class="text-gray-300"><span class="text-gray-100 font-medium">Preserve</span> the context so the judgment can be revisited.</span></li>
+        <p>YY Method™ can be expressed through many operational loops. One practical form is:</p>
+        <ol class="mt-5 space-y-5 text-sm">
+          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">1</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Capture — What actually happened?</span><span class="block mt-1">Begin with observation rather than diagnosis. Sometimes the person already has usable evidence. Sometimes Capture becomes active: ask the smallest concrete question, comparison, or test that can produce a trustworthy observation.</span></span></li>
+          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">2</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Why — What explanation currently fits?</span><span class="block mt-1">Surface the person's present hypothesis and the evidence that makes it plausible, so the interpretation becomes visible enough to inspect.</span></span></li>
+          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">3</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Why-Not — What could weaken or complicate it?</span><span class="block mt-1">Look for missing evidence, alternative causes, changed conditions, and observations that do not fit before the first plausible explanation hardens into false certainty.</span></span></li>
+          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">4</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Commit — What is one provisional next move?</span><span class="block mt-1">Choose one bounded action or experiment. Change as little as necessary, know what will be observed, and treat the result as additional evidence rather than proof.</span></span></li>
+          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">5</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Timestamp — What should remain available later?</span><span class="block mt-1">Preserve the observation, reasoning, conditions, correction, and unresolved question so future judgment can revise the conclusion rather than merely inherit it.</span></span></li>
         </ol>
-        <p class="mt-6">The loop is not sacred. It is a scaffold. Different domains may require different rituals, interfaces, or sequences. What matters is the deeper function: <span class="anno">uncertainty must become visible, pressure must be introduced, context must be preserved, and the next action must remain accountable to judgment.</span></p>
+        <p class="mt-6">The loop is a scaffold, not a ritual. What matters is that evidence precedes interpretation, opposition precedes premature certainty, action remains provisional, and context survives long enough to be corrected.</p>
+      </div>
+      <aside class="marginalia lg:pt-9">
+        <div class="note">
+          <span class="ink">[ pending Ben's actual thoughts ]</span>
+          <span class="by">— B.C.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Evidence before escalation -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">Evidence Before Escalation</h2>
+        <p class="lead">A YY-aligned system prefers the smallest observable distinction that meaningfully reduces uncertainty.</p>
+        <p>It should ask a question the person can answer directly before requesting a more expensive form of evidence. It should use memory before a recording, a simple observation before an elaborate assessment, and a bounded comparison before an open-ended diagnosis.</p>
+        <p>When the person can answer confidently, continue. When the person cannot answer, improve the observation. When additional evidence would not change the next move, stop collecting it.</p>
+        <div class="glass rounded-xl p-5 mt-4 text-sm leading-relaxed text-gray-300" style="border-color:rgba(165,180,252,.2)">Do not increase the cost of observation until cheaper evidence has been exhausted.</div>
+        <p class="mt-5">The system is not rewarded for asking more questions. It is rewarded for asking the question that makes the next question unnecessary.</p>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="note">
@@ -385,6 +431,27 @@
 
     <div class="divider"></div>
 
+    <!-- Echo -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">Echo</h2>
+        <p class="lead">Preserved judgment should be recoverable without continuous dependence on the system that helped form it.</p>
+        <p>YY Method™ therefore distinguishes between reviewing stored knowledge and reconstructing judgment from memory.</p>
+        <p>An Echo is what a person can recover in their own words after the source, teacher, tool, or AI becomes silent.</p>
+        <p>The system does not immediately grade the Echo. It preserves and reflects it. What survives, changes, or disappears becomes evidence for future learning without turning forgetting into failure.</p>
+        <div class="glass rounded-xl p-5 mt-4 text-sm leading-relaxed text-gray-300" style="border-color:rgba(165,180,252,.2)">What remains after the assistance disappears?</div>
+        <p class="mt-5">A system has not strengthened judgment merely because the user understood its explanation in the moment. Judgment has transferred when the person can later reconstruct the observation, reasoning, uncertainty, and next move without being led through them again.</p>
+      </div>
+      <aside class="marginalia lg:pt-9">
+        <div class="note warm">
+          <span class="ink ink-warm">[ pending Ben's actual thoughts ]</span>
+          <span class="by">— B.C.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- AI and authorship -->
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
@@ -392,6 +459,12 @@
         <p class="lead">YY Method™ is not anti-AI. It is opposed to outsourced judgment.</p>
         <p>AI can be useful as critic, editor, simulator, translator, compressor, memory aid, retrieval system, and challenge partner. But AI should not silently become the origin of the user's thought. <span class="anno">The danger is not that AI produces imperfect language. The danger is that it can produce fluent language quickly enough to replace the friction where judgment was supposed to form.</span></p>
         <p>A healthy relationship with AI keeps the human upstream of judgment formation. AI may help formalize, test, critique, and transmit what the human is working to understand. It should not erase the human's responsibility to perceive, choose, and revise.</p>
+        <p>A productive human-AI partnership does not require the human to think like a taxonomy and the AI to imitate a human originator. The human can remain close to experience: cases, conversations, exceptions, corrections, stories, and judgments formed under pressure.</p>
+        <p>AI can then compare those cases, expose recurring patterns, propose abstractions, detect contradictions, and make the reasoning transferable.</p>
+        <div class="glass rounded-xl p-5 mt-4 font-mono text-[.8rem] leading-relaxed text-indigo-200/80">
+          Human experience fans outward. · AI compresses. · The human corrects the compression. · The evidence remains attached.
+        </div>
+        <p class="mt-5">This preserves granularity without forcing the human to surrender authorship or become the system architect of their own tacit knowledge.</p>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="note warm">
@@ -429,6 +502,12 @@
         <p>A YY-aligned system should:</p>
       </div>
       <div class="mt-6 grid md:grid-cols-2 gap-x-10 gap-y-3 max-w-4xl text-sm">
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">turn conclusions back into observations</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">ask before prescribing when the problem is under-defined</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">prefer low-cost, observable evidence</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">do not ask the human to perform an abstraction the system can perform</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">leave room for the human to retrieve and reconstruct without assistance</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">measure success by what remains after the system becomes silent</span></div>
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">make uncertainty visible</span></div>
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">preserve context instead of flattening decisions into outcomes</span></div>
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">make disagreement and opposition available before commitment</span></div>
