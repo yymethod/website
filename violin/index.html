@@ -81,6 +81,13 @@
       border-radius: .75rem;
       color-scheme: normal;
     }
+    .video-embed {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: .75rem;
+      background: #000;
+    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
@@ -125,14 +132,14 @@
           <p class="sr-only">YY Method™ / Applications / Violin</p>
           <h1 class="mt-0 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Stop losing what practice was trying to teach you.</h1>
           <p class="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl">
-            Violin Stand Partner helps you return to the stand with the right question, not another generic practice plan.
+            YY Method™ for Violin is a public framework for preserving the thread of practice: what was noticed, what was tested, what remains uncertain, and what should be carried into the next session.
           </p>
           <div class="mt-5 glass rounded-xl p-5 max-w-2xl">
             <p class="eyebrow text-amber-200/70">Tell it what feels unclear</p>
             <p class="mt-3 text-sm leading-relaxed text-gray-300">“My sound is bad.” · “My shifts are inconsistent.” · “I don’t know what my teacher meant.” · “Practice was awful.”</p>
           </div>
-          <p class="mt-5 text-sm text-gray-400 leading-relaxed max-w-2xl">Instead of rushing to diagnose, it helps you notice what actually happened, narrow the possibilities, test one variable, and preserve a better question for your next session or lesson.</p>
-          <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">Your teacher remains the teacher. Your judgment remains yours. The AI helps you keep the thread.</p>
+          <p class="mt-5 text-sm text-gray-400 leading-relaxed max-w-2xl">The method helps a violinist notice what actually happened, narrow the possibilities, test one variable, and preserve a better question for the next practice session or lesson.</p>
+          <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">Violin Stand Partner is the working application of that framework. Your teacher remains the teacher. Your judgment remains yours. The AI helps you keep the thread.</p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="https://studio.com/ben-chan/6a40f929-6e30-41ae-8957-f8d6b6fd9b6a?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=hero" target="_blank" rel="noopener" onclick="track('violin_hero_cta_click'); track('violin_studio_app_click')" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-amber-100 transition-colors">Practice with Violin Stand Partner</a>
             <a href="#practice-loop" onclick="track('violin_secondary_cta_click')" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-amber-200/40 hover:text-amber-100 transition-colors">See the method</a>
@@ -163,7 +170,7 @@
 
     <section class="mx-auto max-w-5xl px-6 py-12">
       <p class="eyebrow">What It Does For You</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">A useful stand partner restores continuity before giving advice.</h2>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">A useful violin method restores continuity before giving advice.</h2>
       <div class="mt-8 grid md:grid-cols-2 gap-4">
         <div class="glass rounded-xl p-6">
           <p class="eyebrow text-amber-200/70">At the stand</p>
@@ -178,40 +185,30 @@
 
     <div class="mx-auto max-w-3xl px-6 divider"></div>
 
-    <section class="mx-auto max-w-3xl px-6 py-12">
-      <p class="eyebrow">Built Around the Teacher Relationship</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">It helps you return with a more specific question.</h2>
-      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>Violin Stand Partner does not compete with your teacher. It helps you remember what your teacher meant, test it honestly during the week, and return with a more specific question.</p>
-        <div class="glass rounded-xl p-5 text-gray-300">“This worked slowly, but only when the bow stayed quieter before the shift. Does that suggest I am rushing the bow change, or should we look at the left hand?”</div>
-        <p>That is far more useful than: “It still doesn’t work.”</p>
-      </div>
-    </section>
-
-    <div class="mx-auto max-w-3xl px-6 divider"></div>
-
-    <section class="mx-auto max-w-3xl px-6 py-12">
-      <p class="eyebrow">The First Move Is Usually a Question</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">A violinist often arrives with an interpretation rather than an observation.</h2>
-      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>“My wrist hurts.” “My sound is bad.” “I’m getting worse.”</p>
-        <p>A generic AI can accept the statement, infer a likely cause, and produce a long answer. Violin Stand Partner should begin differently.</p>
-        <div class="glass rounded-xl p-5 text-gray-300">“Which hand?” · “What did you observe that made you call the sound bad?” · “What evidence makes you believe you are getting worse?”</div>
-        <p class="text-gray-300">The question is not a delay before coaching. The question is the first act of coaching.</p>
-        <p>A useful first question should be short, physically or musically observable, appropriate to the violinist’s level, inexpensive to answer, and capable of eliminating several weak explanations.</p>
-        <p>The violinist reports what they can observe. The coach helps interpret it without pretending the first interpretation is final.</p>
-      </div>
-    </section>
-
-    <div class="mx-auto max-w-3xl px-6 divider"></div>
-
-    <section class="mx-auto max-w-3xl px-6 py-12">
-      <p class="eyebrow">Not Friction for Its Own Sake</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">The smallest useful question is the goal.</h2>
-      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>Violin Stand Partner will not interrogate you indefinitely. Its goal is to ask the smallest question that meaningfully changes the pathway.</p>
-        <p>Sometimes that takes one turn. Sometimes the evidence is not ready, and the coach will help you observe again.</p>
-        <p class="text-gray-300">The system is designed to reduce wasted practice, not to make you fill out forms before you play.</p>
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <div class="grid lg:grid-cols-[1fr_.9fr] gap-6 lg:gap-10 items-start">
+        <div class="max-w-3xl">
+          <p class="eyebrow">Why I Built This</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight">The method comes from real practice, not abstract advice.</h2>
+          <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+            <p>Violin practice is full of moments where the answer cannot be safely guessed from the first sentence. A route feels unstable. One fingering almost works. A slow version reveals something the fast version hides.</p>
+            <p class="text-gray-300">That is the environment YY Method™ for Violin is built for: preserve what was actually observed, test one variable, and keep judgment attached to evidence.</p>
+          </div>
+          <a href="https://benchanviolin.com/library/tags/practice-strategy" target="_blank" rel="noopener" onclick="track('violin_library_practice_strategy_click')" class="inline-flex mt-6 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors">Browse practice strategy clips →</a>
+        </div>
+        <div class="glass rounded-xl p-4 md:p-5">
+          <p class="eyebrow text-amber-200/70">BenChanViolin / Practice Strategy</p>
+          <h3 class="mt-2 text-lg font-semibold tracking-tight">Mendelssohn Violin Concerto: shifting and hand frame (1:04 - 2:30)</h3>
+          <iframe
+            class="video-embed mt-4"
+            src="https://www.youtube.com/embed/69_-GJO5Z9M?start=64&end=150"
+            title="Ben Chan Violin: Mendelssohn Violin Concerto shifting and hand frame"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <p class="mt-4 text-xs leading-relaxed text-gray-500">A direct example of the page's opening question: an inconsistent shift becomes a concrete hand-frame and route problem, not a generic diagnosis.</p>
+        </div>
       </div>
     </section>
 
@@ -255,6 +252,45 @@
     <div class="mx-auto max-w-3xl px-6 divider"></div>
 
     <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">Built Around the Teacher Relationship</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">It helps you return with a more specific question.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>YY Method™ for Violin does not compete with your teacher. It is built to help a violinist remember what the teacher meant, test it honestly during the week, and return with a more specific question.</p>
+        <div class="glass rounded-xl p-5 text-gray-300">“This worked slowly, but only when the bow stayed quieter before the shift. Does that suggest I am rushing the bow change, or should we look at the left hand?”</div>
+        <p>That is far more useful than: “It still doesn’t work.”</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">The First Move Is Usually a Question</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">A violinist often arrives with an interpretation rather than an observation.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>“My wrist hurts.” “My sound is bad.” “I’m getting worse.”</p>
+        <p>A generic AI can accept the statement, infer a likely cause, and produce a long answer. YY Method™ for Violin begins differently.</p>
+        <div class="glass rounded-xl p-5 text-gray-300">“Which hand?” · “What did you observe that made you call the sound bad?” · “What evidence makes you believe you are getting worse?”</div>
+        <p class="text-gray-300">The question is not a delay before help. The question is the first act of the method.</p>
+        <p>A useful first question should be short, physically or musically observable, appropriate to the violinist’s level, inexpensive to answer, and capable of eliminating several weak explanations.</p>
+        <p>The violinist reports what they can observe. A useful support system helps interpret it without pretending the first interpretation is final.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-3xl px-6 py-12">
+      <p class="eyebrow">Not Friction for Its Own Sake</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">The smallest useful question is the goal.</h2>
+      <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
+        <p>YY Method™ for Violin is not designed to interrogate indefinitely. Its goal is to ask the smallest question that meaningfully changes the pathway.</p>
+        <p>Sometimes that takes one turn. Sometimes the evidence is not ready, and the next move is to observe again.</p>
+        <p class="text-gray-300">The system is designed to reduce wasted practice, not to make you fill out forms before you play.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+    <section class="mx-auto max-w-3xl px-6 py-12">
       <p class="eyebrow">A Practice Thread, Not a Practice Checklist</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">Violin practice is rarely one clean problem solved in one clean session.</h2>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
@@ -281,9 +317,9 @@
           <h3 class="mt-3 text-lg font-semibold">What actually happened?</h3>
           <p class="mt-3 text-sm text-gray-400">State what happened before explaining it.</p>
           <p class="mt-4 text-sm text-gray-400">Sometimes the violinist already has a usable observation: “The shift arrived late only when I came from the lower string.” “The bow began to bounce near the frog.” “My hand changed after ten minutes.”</p>
-          <p class="mt-4 text-sm text-gray-400">Sometimes the violinist begins with a conclusion: “My shifting is bad.” “My wrist hurts.” “The sound is wrong.” “I don’t know.” In that case, the coach helps create the observation.</p>
+          <p class="mt-4 text-sm text-gray-400">Sometimes the violinist begins with a conclusion: “My shifting is bad.” “My wrist hurts.” “The sound is wrong.” “I don’t know.” In that case, the first task is to create an observation.</p>
           <p class="mt-4 text-sm text-gray-400">It should prefer quick distinctions the violinist can see, hear, feel, or remember: bow hand or left hand, while playing or afterward, up-bow or down-bow, frog, middle, or tip, louder or softer, faster or slower, before, during, or after.</p>
-          <p class="mt-4 text-sm text-gray-400">If the violinist cannot answer confidently, the coach may improve the evidence with a mirror, comparison, instrument-in-hand test, recording, teacher, clinician, or luthier, but only when the cheaper observation is insufficient.</p>
+          <p class="mt-4 text-sm text-gray-400">If the violinist cannot answer confidently, the next step may improve the evidence with a mirror, comparison, instrument-in-hand test, recording, teacher, clinician, or luthier, but only when the cheaper observation is insufficient.</p>
           <p class="mt-4 text-sm text-gray-400">Observation is not diagnosis. Capture is the process of obtaining evidence good enough for Why and Why-Not to become meaningful.</p>
         </article>
         <article class="method-card glass rounded-xl p-6">
@@ -319,14 +355,14 @@
     <div class="mx-auto max-w-3xl px-6 divider"></div>
 
     <section class="mx-auto max-w-3xl px-6 py-12">
-      <p class="eyebrow">The Stand Partner Questioning Standard</p>
+      <p class="eyebrow">The Violin Questioning Standard</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">One useful question beats a premature diagnosis.</h2>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>When a violinist presents an under-defined problem, the coach should usually respond with one useful question rather than a diagnosis.</p>
+        <p>When a violinist presents an under-defined problem, the method should usually produce one useful question rather than a diagnosis.</p>
         <p>The first response should not contain a long explanation, several possible causes, five exercises, a confident diagnosis, or a recap of everything the violinist already said.</p>
         <div class="glass rounded-xl p-5 text-gray-300">“Which hand, or did I misunderstand?”</div>
-        <p>If the violinist corrects the coach, only the corrected detail needs to be acknowledged. The conversation should not restart.</p>
-        <p>The coach should prefer one binary observation, one small set of concrete choices, one short clarification, a visual or physical comparison, and live or recorded evidence only when needed.</p>
+        <p>If the violinist corrects the premise, only the corrected detail needs to be acknowledged. The process should not restart.</p>
+        <p>The method should prefer one binary observation, one small set of concrete choices, one short clarification, a visual or physical comparison, and live or recorded evidence only when needed.</p>
         <p class="text-gray-300">The purpose is not to ask the most questions. It is to ask the question that collapses the most unnecessary uncertainty while requiring the least from the violinist.</p>
       </div>
     </section>
@@ -373,14 +409,14 @@
     <section class="mx-auto max-w-5xl px-6 py-12">
       <p class="eyebrow">Human First. AI Second.</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">The violinist remains the authority.</h2>
-      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">Violin Stand Partner uses AI as a support layer for attention, continuity, retrieval, and comparison. It may suggest. It may surface a pattern. It may prepare a question. It should not pretend to know more than the evidence supports.</p>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">YY Method™ for Violin treats AI as a support layer for attention, continuity, retrieval, and comparison. It may suggest. It may surface a pattern. It may prepare a question. It should not pretend to know more than the evidence supports.</p>
       <div class="mt-8 grid md:grid-cols-2 gap-4">
         <div class="glass rounded-xl p-6">
           <p class="eyebrow">The Violinist Decides</p>
           <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• what they hear</li><li>• what they feel</li><li>• what matters musically</li><li>• what becomes active or durable</li><li>• what should be postponed, removed, or revisited</li><li>• when a teacher, clinician, luthier, or live musical collaborator should enter the loop</li></ul>
         </div>
         <div class="glass rounded-xl p-6">
-          <p class="eyebrow text-amber-200/70">The App Supports</p>
+          <p class="eyebrow text-amber-200/70">The Support Layer Carries</p>
           <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• attention</li><li>• continuity</li><li>• retrieval</li><li>• comparison</li><li>• provisional recommendations</li><li>• better questions when human help is needed</li></ul>
         </div>
       </div>
@@ -393,7 +429,7 @@
       <p class="eyebrow">Human Principles, Offered Provisionally</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">Retrieved teaching language is not a universal law.</h2>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>Violin Stand Partner may retrieve Ben Chan’s teaching principles, language, videos, and recurring observations.</p>
+        <p>The method may retrieve Ben Chan’s teaching principles, language, videos, and recurring observations.</p>
         <p>These are experienced teaching opinions offered when the evidence makes them relevant: “Based on what you noticed, one principle Ben often uses here is...”</p>
         <p>Each principle should remain connected to the observation that triggered it, the violinist level for which it is useful, its common exceptions, the conditions under which it may stop applying, the original teaching source or video, and the experiment that could support or weaken it.</p>
         <p class="text-gray-300">The point is not to make Ben’s language authoritative merely because it has been retrieved. The point is to let accumulated human judgment enter the conversation without disguising it as certainty.</p>
@@ -404,13 +440,13 @@
 
     <section class="mx-auto max-w-3xl px-6 py-12">
       <p class="eyebrow text-amber-200/70">Echo</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">What remains when the stand partner steps away?</h2>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">What remains when the support layer steps away?</h2>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
-        <p>Every practice day ends with two minutes without the coach.</p>
+        <p>Every practice day ends with two minutes without assistance.</p>
         <div class="glass rounded-xl p-5 text-gray-300">No notes. No transcript. No prompts. No hints. No correction.</div>
         <p>The violinist says, in their own words, what remains from the day: what they noticed, what explanation they considered, what did not fit, what they tried, what changed, and what question remains open.</p>
-        <p>The coach does not grade the Echo. The next day’s brief simply reflects it: “Yesterday, in your own words, you remembered...”</p>
-        <p>Nothing is marked missing. Forgetting is not treated as failure. The violinist hears their own judgment return before the coach offers anything new.</p>
+        <p>The Echo is not graded. The next day’s brief simply reflects it: “Yesterday, in your own words, you remembered...”</p>
+        <p>Nothing is marked missing. Forgetting is not treated as failure. The violinist hears their own judgment return before any new prompt appears.</p>
         <p class="text-gray-300">Echo is not a summary written by AI. It is evidence of what the violinist can reconstruct after AI becomes silent.</p>
       </div>
     </section>
@@ -435,8 +471,8 @@
         <p>The danger is not that AI gives advice. The danger is that AI sounds continuous when the evidence is not continuous.</p>
       </div>
       <div class="mt-6 glass rounded-xl p-5" style="border-color:rgba(214,177,95,.28);box-shadow:inset 2px 0 0 rgba(214,177,95,.7)">
-        <p class="text-sm leading-relaxed text-gray-300">This is why Violin Stand Partner asks for explicit page statuses, preserves teacher-ready questions, keeps active pages visible, and makes correction part of the loop — not decoration on top of it.</p>
-        <p class="mt-3 text-sm leading-relaxed text-gray-400">The goal is not for the app to sound right. The goal is for you to become harder to mislead, better at noticing, and able to return to unfinished work without starting from zero.</p>
+        <p class="text-sm leading-relaxed text-gray-300">This is why the violin approach asks for explicit page statuses, preserves teacher-ready questions, keeps active pages visible, and makes correction part of the loop — not decoration on top of it.</p>
+        <p class="mt-3 text-sm leading-relaxed text-gray-400">The goal is not for a tool to sound right. The goal is for you to become harder to mislead, better at noticing, and able to return to unfinished work without starting from zero.</p>
       </div>
     </section>
 
@@ -460,13 +496,13 @@
     <div class="mx-auto max-w-3xl px-6 divider"></div>
 
     <section class="mx-auto max-w-3xl px-6 py-12">
-      <p class="eyebrow">Who Violin Stand Partner Is Built for First</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">A stand partner joins after basic setup exists.</h2>
+      <p class="eyebrow">Who This Is Built for First</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">This approach works best after basic setup exists.</h2>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-gray-400">
         <p>The initial version is designed primarily for intermediate, advanced, professional, returning, and teacher-level violinists who already possess basic setup and enough playing vocabulary to make simple observations about their work.</p>
         <p>Beginning violinists often need live visual correction, physical setup guidance, and direct teacher supervision before an AI conversation can interpret their observations reliably.</p>
-        <p>A beginner may still use the system to preserve teacher instructions, prepare questions, remember what happened in practice, maintain a simple practice thread, and recognize when human guidance is needed.</p>
-        <p class="text-gray-300">But Violin Stand Partner should not pretend to replace foundational instruction it cannot yet see or demonstrate well. It does not replace the person who first teaches the violinist how to hold the instrument.</p>
+        <p>A beginner may still use the approach to preserve teacher instructions, prepare questions, remember what happened in practice, maintain a simple practice thread, and recognize when human guidance is needed.</p>
+        <p class="text-gray-300">But the method should not pretend to replace foundational instruction it cannot yet see or demonstrate well. It does not replace the person who first teaches the violinist how to hold the instrument.</p>
       </div>
     </section>
 
@@ -475,16 +511,16 @@
     <section class="mx-auto max-w-3xl px-6 py-12">
       <p class="eyebrow">Lesson Continuity</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">Teacher guidance should survive the week.</h2>
-      <p class="mt-5 text-sm leading-relaxed text-gray-400">Stand Partner is the continuity layer around the lesson, not a substitute for it: lesson notes, teacher cues, active practice pages, and the next question all stay intact between sessions.</p>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400">The continuity layer belongs around the lesson, not in place of it: lesson notes, teacher cues, active practice pages, and the next question all stay intact between sessions.</p>
       <p class="mt-4 text-sm leading-relaxed text-gray-300">The point is to make your next lesson more specific, not to replace the person who can actually see and hear you play.</p>
     </section>
 
     <div class="mx-auto max-w-3xl px-6 divider"></div>
 
     <section class="mx-auto max-w-5xl px-6 py-12">
-      <p class="eyebrow">What Violin Stand Partner Adds</p>
+      <p class="eyebrow">What the Application Adds</p>
       <h2 class="mt-4 text-3xl font-bold tracking-tight">The method is public. Your practice record is private.</h2>
-      <p class="mt-5 text-base leading-relaxed text-gray-200 font-medium">Open the app and begin with continuity rather than instruction.</p>
+      <p class="mt-5 text-base leading-relaxed text-gray-200 font-medium">Begin with continuity rather than instruction.</p>
       <p class="mt-4 text-sm leading-relaxed text-gray-400 max-w-3xl">The Today View should restore the thread of what the violinist already noticed before offering anything new.</p>
       <div class="mt-8 grid md:grid-cols-2 gap-4">
         <div class="glass rounded-xl p-6">
@@ -501,8 +537,8 @@
         <p class="mt-3 text-sm leading-relaxed text-gray-400">Not every note deserves permanence. YY Method™ separates passing reflection from durable memory — something becomes part of your long-term practice record only when you choose to keep it.</p>
       </div>
       <div class="mt-8 glass rounded-xl p-6">
-        <p class="text-sm leading-relaxed text-gray-300">YY Method™ for Violin is the public framework. Violin Stand Partner is the private questioning and continuity system that helps you turn vague conclusions into observable questions, test one variable, preserve teacher guidance, retrieve principles only when they fit the evidence, and hear your own thinking through Echo.</p>
-        <p class="mt-4 text-sm leading-relaxed text-gray-400">The app succeeds when more of the process becomes yours. You may still use it for continuity, retrieval, and challenge, but over time the questions should become increasingly available in your own practice.</p>
+        <p class="text-sm leading-relaxed text-gray-300">YY Method™ for Violin is the public framework. Violin Stand Partner is the private questioning and continuity system built from it: vague conclusions become observable questions, one variable gets tested, teacher guidance is preserved, principles appear only when they fit the evidence, and Echo lets you hear your own thinking return.</p>
+        <p class="mt-4 text-sm leading-relaxed text-gray-400">The application succeeds when more of the process becomes yours. You may still use it for continuity, retrieval, and challenge, but over time the questions should become increasingly available in your own practice.</p>
         <a href="https://studio.com/ben-chan/6a40f929-6e30-41ae-8957-f8d6b6fd9b6a?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=stand_partner_section" target="_blank" rel="noopener" onclick="track('violin_studio_app_click')" class="inline-flex mt-5 justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-amber-100 transition-colors">Open Violin Stand Partner</a>
         <p class="mt-5 text-sm text-gray-500">The method is public. Your practice record, open questions, corrections, and Echoes remain yours.</p>
       </div>
@@ -512,7 +548,7 @@
 
     <section class="mx-auto max-w-5xl px-6 py-12">
       <p class="eyebrow">How It Fits Together</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight">Method, teaching, and stand partner.</h2>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight">Method, teaching, and application.</h2>
       <div class="mt-8 grid md:grid-cols-3 gap-4">
         <article class="glass rounded-xl p-6 flex flex-col">
           <p class="eyebrow">YY Method™</p>
@@ -536,7 +572,7 @@
 
     <section class="mx-auto max-w-3xl px-6 py-14 text-center">
       <h2 class="text-3xl font-bold tracking-tight">Use the method at your own stand.</h2>
-      <p class="mt-5 text-sm leading-relaxed text-gray-400">Violin Stand Partner is a private questioning and continuity system for violinists who already know enough to observe their own practice but do not want useful evidence, teacher guidance, and hard-earned judgment to disappear between sessions.</p>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400">YY Method™ for Violin is for violinists who already know enough to observe their own practice but do not want useful evidence, teacher guidance, and hard-earned judgment to disappear between sessions. Violin Stand Partner is the private continuity system built to apply it.</p>
       <a href="https://studio.com/ben-chan/6a40f929-6e30-41ae-8957-f8d6b6fd9b6a?utm_source=yymethod.com&utm_medium=referral&utm_campaign=violin_application&utm_content=final_cta" target="_blank" rel="noopener" onclick="track('violin_final_cta_click'); track('violin_studio_app_click')" class="inline-flex mt-8 justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-amber-100 transition-colors">Open Violin Stand Partner</a>
       <p class="mt-5 text-sm text-gray-500">The AI carries the branching burden. You keep the judgment.</p>
     </section>
