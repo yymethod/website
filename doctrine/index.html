@@ -164,11 +164,11 @@
     <div class="grid lg:grid-cols-[1fr_.86fr] gap-10 lg:gap-16 items-start">
       <div class="max-w-3xl">
         <p class="sr-only">YY Method™ / Doctrine</p>
-        <h1 class="mt-0 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">How judgment survives AI execution.</h1>
+        <h1 class="mt-0 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">How <span style="color:var(--ink)">judgment</span> survives AI execution.</h1>
         <p class="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl">
           A shared specification for humans and AI systems that need to reason together without collapsing uncertainty into premature answers.
         </p>
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">The root page states the principle. This page explains the operating model: what AI may execute, what judgment must remain human, and how evidence moves through the loop.</p>
+        <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">YY Method™ treats AI as an execution layer for memory, pattern recognition, branching, retrieval, and challenge while keeping belief, authorship, correction, and responsibility with the human. It turns uncertain moments into inspectable loops of Capture, Why, Why-Not, Commit, and Timestamp so answers become evidence instead of authority.</p>
         <p class="mt-4 text-gray-300 text-sm leading-relaxed max-w-2xl">The AI carries the branching burden. <span style="color:var(--ink)">You keep the judgment.</span></p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#doctrine" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Start the deep dive</a>
@@ -208,6 +208,10 @@
         <p class="lead">Meaningful human work rarely happens under perfect certainty.</p>
         <p class="mt-4">Learning, performance, writing, teaching, building, leadership, and decision-making all unfold under changing conditions. The person acting rarely has complete information. The system responding may be unstable. The feedback may be delayed, partial, ambiguous, or misleading.</p>
         <p>YY Method™ exists for that environment. Its purpose is not to remove uncertainty. <span class="anno">Its purpose is to make uncertainty usable.</span> The method helps a person or system expose the current hypothesis, test it against reality, encounter opposition, preserve context, correct drift, and carry forward a better next move.</p>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(165,180,252,.2)">
+          <span class="eyebrow text-indigo-300/70 block mb-3">Operating Context</span>
+          uncertainty → hypothesis → opposition → bounded action → preserved correction
+        </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="viz-card glass rounded-xl p-5">
@@ -236,6 +240,20 @@
         <p>I have spent decades performing, practicing, and teaching violin, including a large public archive of explanations and demonstrations. I also work professionally with software, systems, AI behavior, information architecture, and the practical limits of probabilistic tools.</p>
         <p>Violin Stand Partner is where those two forms of expertise meet. Violin supplies difficult, embodied, context-sensitive problems that cannot safely be reduced to generic answers. AI supplies the ability to preserve context, navigate branching possibilities, retrieve relevant principles, and adapt the questioning path in real time.</p>
         <p class="lead mt-5">YY Method™ supplies the governing boundary between them.</p>
+        <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+          <div class="glass rounded-xl p-4">
+            <p class="eyebrow text-gray-500">Domain</p>
+            <p class="mt-2 text-gray-300">embodied violin practice</p>
+          </div>
+          <div class="glass rounded-xl p-4">
+            <p class="eyebrow text-indigo-300/70">System</p>
+            <p class="mt-2 text-gray-300">adaptive AI behavior</p>
+          </div>
+          <div class="glass rounded-xl p-4" style="border-color:rgba(230,201,143,.28)">
+            <p class="eyebrow text-amber-200/70">Boundary</p>
+            <p class="mt-2 text-gray-300"><span class="text-indigo-300">human judgment</span> stays active</p>
+          </div>
+        </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="note warm">
@@ -253,9 +271,13 @@
         <h2 class="eyebrow text-gray-500 mb-4">The Failure Mode</h2>
         <p>Modern tools can answer quickly. Teachers, recordings, books, software, search engines, and AI systems can all provide external intelligence. That intelligence can be valuable. It can reveal blind spots, preserve knowledge, widen perspective, and accelerate learning.</p>
         <p class="lead">But external intelligence becomes dangerous when it replaces the moment where judgment should form.</p>
-        <p>A learner who runs to an authority every time a question appears, accepts the answer immediately, and acts without testing has not strengthened judgment. <span class="anno">The learner has outsourced it.</span> The problem is not guidance. The problem is unexamined substitution.</p>
+        <p style="color:var(--ink-warm)">A learner who runs to an authority every time a question appears, accepts the answer immediately, and acts without testing has not strengthened judgment. <span class="anno">The learner has outsourced it.</span> The problem is not guidance. The problem is unexamined substitution.</p>
         <p>A fluent answer can resolve uncertainty too quickly. When a person offers a conclusion before the observations beneath it, a system can infer a plausible cause and still solve the wrong problem.</p>
         <p>YY Method™ draws a hard line between assistance and dependency. Guidance is healthy when it increases the user's judgment surface. It is corrosive when it narrows that surface, bypasses perception, or turns the user into an executor of someone else's answer.</p>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(230,201,143,.24)">
+          <span class="eyebrow text-amber-200/70 block mb-3">Bad Handoff</span>
+          authority answer → untested action → borrowed judgment
+        </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="note">
@@ -267,6 +289,71 @@
           <span class="by">— B.C.</span>
         </div>
       </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- The doctrine -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">The Doctrine</h2>
+        <p class="lead">YY Method™ is anti-outsourced judgment, not anti-guidance.</p>
+        <p>It does not reject teachers, tools, recordings, systems, or AI. It rejects the passive transfer of responsibility from the human decision-maker to an external authority.</p>
+        <p>The method asks every external recommendation to become inspectable:</p>
+        <div class="glass rounded-xl p-5 mt-4 font-mono text-[.8rem] leading-relaxed text-indigo-200/80">
+          What is the current hypothesis? · Why might it be true? · Why might it be wrong? · What evidence would confirm it? · What evidence would weaken it? · What should be tried next? · What should be preserved for future judgment?
+        </div>
+        <p class="mt-5 lead">This turns an answer into a training event.</p>
+      </div>
+      <aside class="marginalia lg:pt-9">
+        <div class="note">
+          <span class="ink">I did in fact let AI write out the doctrine for the YY Method. But note that I also have hundreds of drafts all over my hard drives, cloud drives, notebooks, voice memos, etc. This is a polished version of over a thousand hours of brain-sweating work.</span>
+          <span class="by">— B.C.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Human, system, and tool -->
+    <section class="py-12">
+      <div class="grid lg:grid-cols-[1fr_270px] gap-x-10">
+        <div class="max-w-2xl">
+          <h2 class="eyebrow text-gray-500 mb-4">Human, System, and Tool</h2>
+          <p>YY Method™ separates three roles. A healthy system keeps these roles distinct. Problems arise when structure pretends to understand, when probabilistic output pretends to be certainty, or when the human gives up the responsibility to judge.</p>
+        </div>
+        <aside class="marginalia lg:pt-9">
+          <div class="viz-card glass rounded-xl p-5">
+            <p class="viz-title">Three Layers</p>
+            <div class="mt-4 space-y-3">
+              <div class="viz-step"><span class="viz-dot"></span><span>structure preserves state</span></div>
+              <div class="viz-step"><span class="viz-dot"></span><span>AI generates interpretation</span></div>
+              <div class="viz-step"><span class="viz-dot warm"></span><span>human governs meaning</span></div>
+            </div>
+          </div>
+          <div class="note">
+            <span class="ink">That's me, human layer down there. Yep.</span>
+            <span class="by">— B.C.</span>
+          </div>
+        </aside>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-4 max-w-4xl">
+        <div class="glass rounded-xl p-5">
+          <p class="eyebrow text-gray-500">Deterministic layer</p>
+          <p class="mt-3 text-gray-200 font-medium text-sm">Preserves structure.</p>
+          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Holds state, boundaries, records, permissions, timestamps, commitments, and continuity.</p>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <p class="eyebrow text-gray-500">Probabilistic layer</p>
+          <p class="mt-3 text-gray-200 font-medium text-sm">Generates interpretation.</p>
+          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Proposes hypotheses, detects patterns, synthesizes context, and adapts to ambiguity.</p>
+        </div>
+        <div class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.48);box-shadow:inset 3px 0 0 rgba(165,180,252,.85);background:rgba(165,180,252,.08)">
+          <p class="eyebrow" style="color:var(--ink)">Human layer</p>
+          <p class="mt-3 font-semibold text-sm" style="color:var(--ink)">Governs judgment.</p>
+          <p class="mt-2 text-sm leading-relaxed" style="color:var(--ink)">Accepts, rejects, revises, tests, and takes responsibility for meaning.</p>
+        </div>
+      </div>
     </section>
 
     <div class="divider"></div>
@@ -302,6 +389,26 @@
 
     <div class="divider"></div>
 
+    <!-- Executive, not judge -->
+    <section class="py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">AI as Executive, Not Judge</h2>
+        <p class="lead">The system should remain clearly artificial, appropriately bounded, and willing to defer to the real people who know the user.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-4 max-w-4xl">
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow text-indigo-300/70">The AI system may</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• interview</li><li>• organize</li><li>• compare</li><li>• retrieve</li><li>• challenge</li><li>• simulate</li><li>• remember</li><li>• reflect</li><li>• suggest</li></ul>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <p class="eyebrow text-gray-500">It should not silently assume authority to</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• diagnose</li><li>• declare truth</li><li>• substitute for a teacher</li><li>• manufacture certainty</li><li>• simulate intimacy or emotional authority</li><li>• persuade the user to accept its interpretation</li><li>• conceal unresolved evidence beneath fluent language</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- Personalization -->
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
@@ -315,7 +422,7 @@
             <p class="mt-3 text-sm text-gray-400 leading-relaxed">Changes the recommendation.</p>
           </div>
           <div class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.28);box-shadow:inset 2px 0 0 rgba(165,180,252,.6)">
-            <p class="eyebrow text-indigo-300/70">Judgment adaptation</p>
+            <p class="eyebrow" style="color:var(--ink)">Judgment adaptation</p>
             <p class="mt-3 text-sm text-gray-400 leading-relaxed">Changes the questioning path according to what the user already knows, what they can observe, what remains ambiguous, and what level of evidence the decision requires.</p>
           </div>
         </div>
@@ -381,120 +488,62 @@
 
     <div class="divider"></div>
 
-    <!-- Executive, not judge -->
-    <section class="py-12">
-      <div class="max-w-2xl">
-        <h2 class="eyebrow text-gray-500 mb-4">AI as Executive, Not Judge</h2>
-        <p class="lead">The system should remain clearly artificial, appropriately bounded, and willing to defer to the real people who know the user.</p>
-      </div>
-      <div class="mt-8 grid md:grid-cols-2 gap-4 max-w-4xl">
-        <div class="glass rounded-xl p-6">
-          <p class="eyebrow text-indigo-300/70">The AI system may</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• interview</li><li>• organize</li><li>• compare</li><li>• retrieve</li><li>• challenge</li><li>• simulate</li><li>• remember</li><li>• reflect</li><li>• suggest</li></ul>
-        </div>
-        <div class="glass rounded-xl p-6">
-          <p class="eyebrow text-gray-500">It should not silently assume authority to</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• diagnose</li><li>• declare truth</li><li>• substitute for a teacher</li><li>• manufacture certainty</li><li>• simulate intimacy or emotional authority</li><li>• persuade the user to accept its interpretation</li><li>• conceal unresolved evidence beneath fluent language</li></ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- The doctrine -->
-    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
-      <div class="max-w-2xl">
-        <h2 class="eyebrow text-gray-500 mb-4">The Doctrine</h2>
-        <p class="lead">YY Method™ is anti-outsourced judgment, not anti-guidance.</p>
-        <p>It does not reject teachers, tools, recordings, systems, or AI. It rejects the passive transfer of responsibility from the human decision-maker to an external authority.</p>
-        <p>The method asks every external recommendation to become inspectable:</p>
-        <div class="glass rounded-xl p-5 mt-4 font-mono text-[.8rem] leading-relaxed text-indigo-200/80">
-          What is the current hypothesis? · Why might it be true? · Why might it be wrong? · What evidence would confirm it? · What evidence would weaken it? · What should be tried next? · What should be preserved for future judgment?
-        </div>
-        <p class="mt-5 lead">This turns an answer into a training event.</p>
-      </div>
-      <aside class="marginalia lg:pt-9">
-        <div class="note">
-          <span class="ink">I did in fact let AI write out the doctrine for the YY Method. But note that I also have hundreds of drafts all over my hard drives, cloud drives, notebooks, voice memos, etc. This is a polished version of over a thousand hours of brain-sweating work.</span>
-          <span class="by">— B.C.</span>
-        </div>
-      </aside>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Probabilistic mastery -->
-    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
-      <div class="max-w-2xl">
-        <h2 class="eyebrow text-gray-500 mb-4">Probabilistic Mastery</h2>
-        <p>YY Method™ treats excellence as probabilistic rather than deterministic. A skilled performer, thinker, builder, or leader does not eliminate variation. <span class="anno">They learn to manage it.</span> They narrow error ranges. They detect drift earlier. They recover faster. They become more sensitive to context. They learn which constraints make better outcomes more likely.</p>
-        <p class="lead">Reliability, in this view, is not perfect repetition. It is disciplined adaptation.</p>
-        <p>This matters especially in environments shaped by human judgment and probabilistic technologies. A system may generate useful insight without being infallible. A person may make good decisions without possessing certainty. A method for the present era must therefore support correction, not pretend correction is unnecessary.</p>
-      </div>
-      <aside class="marginalia lg:pt-9">
-        <div class="note warm">
-          <span class="ink ink-warm">This is a real kicker for systems that use AI to generate apps on the fly. Even the best ones are a mixed bag of mostly right, a few times broken - those breakages matter for those who hit them.</span>
-          <span class="by">— B.C.</span>
-        </div>
-      </aside>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Human, system, and tool -->
-    <section class="py-12">
-      <div class="grid lg:grid-cols-[1fr_270px] gap-x-10">
-        <div class="max-w-2xl">
-          <h2 class="eyebrow text-gray-500 mb-4">Human, System, and Tool</h2>
-          <p>YY Method™ separates three roles. A healthy system keeps these roles distinct. Problems arise when structure pretends to understand, when probabilistic output pretends to be certainty, or when the human gives up the responsibility to judge.</p>
-        </div>
-        <aside class="marginalia lg:pt-9">
-          <div class="viz-card glass rounded-xl p-5">
-            <p class="viz-title">Three Layers</p>
-            <div class="mt-4 space-y-3">
-              <div class="viz-step"><span class="viz-dot"></span><span>structure preserves state</span></div>
-              <div class="viz-step"><span class="viz-dot"></span><span>AI generates interpretation</span></div>
-              <div class="viz-step"><span class="viz-dot warm"></span><span>human governs meaning</span></div>
-            </div>
-          </div>
-          <div class="note">
-            <span class="ink">That's me, human layer down there. Yep.</span>
-            <span class="by">— B.C.</span>
-          </div>
-        </aside>
-      </div>
-      <div class="mt-8 grid md:grid-cols-3 gap-4 max-w-4xl">
-        <div class="glass rounded-xl p-5">
-          <p class="eyebrow text-gray-500">Deterministic layer</p>
-          <p class="mt-3 text-gray-200 font-medium text-sm">Preserves structure.</p>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Holds state, boundaries, records, permissions, timestamps, commitments, and continuity.</p>
-        </div>
-        <div class="glass rounded-xl p-5">
-          <p class="eyebrow text-gray-500">Probabilistic layer</p>
-          <p class="mt-3 text-gray-200 font-medium text-sm">Generates interpretation.</p>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Proposes hypotheses, detects patterns, synthesizes context, and adapts to ambiguity.</p>
-        </div>
-        <div class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.28);box-shadow:inset 2px 0 0 rgba(165,180,252,.6)">
-          <p class="eyebrow text-indigo-300/70">Human layer</p>
-          <p class="mt-3 text-gray-200 font-medium text-sm">Governs judgment.</p>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Accepts, rejects, revises, tests, and takes responsibility for meaning.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
     <!-- The core loop -->
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
         <h2 class="eyebrow text-gray-500 mb-4">The Core Loop</h2>
         <p>YY Method™ can be expressed through many operational loops. One practical form is:</p>
-        <ol class="mt-5 space-y-5 text-sm">
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">1</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Capture — What actually happened?</span><span class="block mt-1">Begin with observation rather than diagnosis. Sometimes the person already has usable evidence. Sometimes Capture becomes active: ask the smallest concrete question, comparison, or test that can produce a trustworthy observation.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">2</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Why — What explanation currently fits?</span><span class="block mt-1">Surface the person's present hypothesis and the evidence that makes it plausible, so the interpretation becomes visible enough to inspect.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">3</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Why-Not — What could weaken or complicate it?</span><span class="block mt-1">Look for missing evidence, alternative causes, changed conditions, and observations that do not fit before the first plausible explanation hardens into false certainty.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">4</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Commit — What is one provisional next move?</span><span class="block mt-1">Choose one bounded action or experiment. Change as little as necessary, know what will be observed, and treat the result as additional evidence rather than proof.</span></span></li>
-          <li class="flex gap-3"><span class="font-mono text-xs text-indigo-300/60 pt-0.5 w-4 shrink-0">5</span><span class="text-gray-300"><span class="block text-gray-100 font-medium">Timestamp — What should remain available later?</span><span class="block mt-1">Preserve the observation, reasoning, conditions, correction, and unresolved question so future judgment can revise the conclusion rather than merely inherit it.</span></span></li>
+        <ol class="mt-6 grid gap-3 text-sm">
+          <li class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.22)">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-xs text-indigo-300/70 rounded-full border border-indigo-300/20 w-7 h-7 shrink-0 inline-flex items-center justify-center">1</span>
+              <div>
+                <p class="font-semibold text-lg leading-tight" style="color:#5f86b8">Capture</p>
+                <p class="mt-1 text-base leading-snug" style="color:var(--ink-warm)">What actually happened?</p>
+                <p class="mt-3 text-gray-400 leading-relaxed">Begin with observation rather than diagnosis. Ask the smallest concrete question, comparison, or test that can produce a trustworthy observation.</p>
+              </div>
+            </div>
+          </li>
+          <li class="glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-xs text-indigo-300/70 rounded-full border border-indigo-300/20 w-7 h-7 shrink-0 inline-flex items-center justify-center">2</span>
+              <div>
+                <p class="font-semibold text-lg leading-tight" style="color:#5f86b8">Why</p>
+                <p class="mt-1 text-base leading-snug" style="color:var(--ink-warm)">What explanation currently fits?</p>
+                <p class="mt-3 text-gray-400 leading-relaxed">Surface the person's present hypothesis and the evidence that makes it plausible, so the interpretation becomes visible enough to inspect.</p>
+              </div>
+            </div>
+          </li>
+          <li class="glass rounded-xl p-5" style="border-color:rgba(230,201,143,.24)">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-xs text-amber-200/80 rounded-full border border-amber-200/20 w-7 h-7 shrink-0 inline-flex items-center justify-center">3</span>
+              <div>
+                <p class="font-semibold text-lg leading-tight" style="color:#5f86b8">Why-Not</p>
+                <p class="mt-1 text-base leading-snug" style="color:var(--ink-warm)">What could weaken or complicate it?</p>
+                <p class="mt-3 text-gray-400 leading-relaxed">Look for missing evidence, alternative causes, changed conditions, and observations that do not fit before plausible explanation hardens into false certainty.</p>
+              </div>
+            </div>
+          </li>
+          <li class="glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-xs text-indigo-300/70 rounded-full border border-indigo-300/20 w-7 h-7 shrink-0 inline-flex items-center justify-center">4</span>
+              <div>
+                <p class="font-semibold text-lg leading-tight" style="color:#5f86b8">Commit</p>
+                <p class="mt-1 text-base leading-snug" style="color:var(--ink-warm)">What is one provisional next move?</p>
+                <p class="mt-3 text-gray-400 leading-relaxed">Choose one bounded action or experiment. Change as little as necessary and treat the result as additional evidence rather than proof.</p>
+              </div>
+            </div>
+          </li>
+          <li class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.22)">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-xs text-indigo-300/70 rounded-full border border-indigo-300/20 w-7 h-7 shrink-0 inline-flex items-center justify-center">5</span>
+              <div>
+                <p class="font-semibold text-lg leading-tight" style="color:#5f86b8">Timestamp</p>
+                <p class="mt-1 text-base leading-snug" style="color:var(--ink-warm)">What should remain available later?</p>
+                <p class="mt-3 text-gray-400 leading-relaxed">Preserve the observation, reasoning, conditions, correction, and unresolved question so <span class="text-indigo-300">future judgment</span> can revise the conclusion rather than inherit it.</p>
+              </div>
+            </div>
+          </li>
         </ol>
         <p class="mt-6">The loop is a scaffold, not a ritual. What matters is that evidence precedes interpretation, opposition precedes premature certainty, action remains provisional, and context survives long enough to be corrected.</p>
       </div>
@@ -552,7 +601,11 @@
         <h2 class="eyebrow text-gray-500 mb-4">Correction Over Obedience</h2>
         <p class="lead">YY Method™ does not seek obedient execution. It seeks trained correction.</p>
         <p>A good system should not merely tell a person what to do. It should help the person see what is being proposed, why it is being proposed, what could be wrong with it, and how to evaluate the result.</p>
-        <p>The ideal output is not dependence on the system. <span class="anno warm">The ideal output is a stronger human judge.</span> The user should leave the interaction with more perception, not less. More agency, not less. More ability to test future claims, not merely more completed tasks.</p>
+        <p><span style="color:var(--ink)">The ideal output is not dependence on the system. The ideal output is a stronger human judge.</span> The user should leave the interaction with more perception, not less. More agency, not less. More ability to test future claims, not merely more completed tasks.</p>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(165,180,252,.2)">
+          <span class="eyebrow text-indigo-300/70 block mb-3">Correction Signal</span>
+          if the system was wrong, the correction becomes future routing data
+        </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="viz-card glass rounded-xl p-5">
@@ -572,6 +625,28 @@
 
     <div class="divider"></div>
 
+    <!-- Probabilistic mastery -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">Probabilistic Mastery</h2>
+        <p>YY Method™ treats excellence as probabilistic rather than deterministic. A skilled performer, thinker, builder, or leader does not eliminate variation. <span class="anno">They learn to manage it.</span> They narrow error ranges. They detect drift earlier. They recover faster. They become more sensitive to context. They learn which constraints make better outcomes more likely.</p>
+        <p class="lead">Reliability, in this view, is not perfect repetition. It is disciplined adaptation.</p>
+        <p>This matters especially in environments shaped by human judgment and probabilistic technologies. A system may generate useful insight without being infallible. A person may make good decisions without possessing certainty. A method for the present era must therefore support correction, not pretend correction is unnecessary.</p>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(230,201,143,.24)">
+          <span class="eyebrow text-amber-200/70 block mb-3">Reliability Model</span>
+          detect drift earlier → recover faster → preserve the correction
+        </div>
+      </div>
+      <aside class="marginalia lg:pt-9">
+        <div class="note warm">
+          <span class="ink ink-warm">This is a real kicker for systems that use AI to generate apps on the fly. Even the best ones are a mixed bag of mostly right, a few times broken - those breakages matter for those who hit them.</span>
+          <span class="by">— B.C.</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- Builder pathway -->
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
@@ -584,8 +659,8 @@
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">When should it request stronger evidence?</span></div>
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">How should corrections alter future routing?</span></div>
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">What should the system remember?</span></div>
-          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">When should it defer to a human?</span></div>
-          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">How do we measure whether the user's judgment is actually improving?</span></div>
+          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span style="color:var(--ink-warm)">When should it defer to a human?</span></div>
+          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span style="color:var(--ink)">How do we measure whether the user's judgment is actually improving?</span></div>
         </div>
         <p class="mt-6 lead">Violin Stand Partner is the first applied test of this framework.</p>
       </div>
@@ -644,7 +719,7 @@
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
         <h2 class="eyebrow text-gray-500 mb-4">Echo</h2>
-        <p class="lead">Preserved judgment should be recoverable without continuous dependence on the system that helped form it.</p>
+        <p class="lead" style="color:var(--ink)">Preserved judgment should be recoverable without continuous dependence on the system that helped form it.</p>
         <p>YY Method™ therefore distinguishes between reviewing stored knowledge and reconstructing judgment from memory.</p>
         <p>An Echo is what a person can recover in their own words after the source, teacher, tool, or AI becomes silent.</p>
         <p>The system does not immediately grade the Echo. It preserves and reflects it. What survives, changes, or disappears becomes evidence for future learning without turning forgetting into failure.</p>
@@ -766,6 +841,10 @@
         <p>The standard is not whether a system always produces the right answer. <span class="anno warm">The standard is whether the system helps judgment improve when the answer is incomplete, ambiguous, contested, or wrong.</span></p>
         <p class="lead">A system that hides uncertainty trains dependence. A system that exposes uncertainty can train judgment.</p>
         <p>YY Method™ is built for the second kind of system.</p>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(165,180,252,.2)">
+          <span class="eyebrow text-indigo-300/70 block mb-3">Passes The Standard</span>
+          incomplete answer + exposed uncertainty + preserved correction = stronger future judgment
+        </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="note">
@@ -781,7 +860,7 @@
     <section id="definition" class="py-16">
       <div class="glass rounded-2xl p-8 md:p-10 shadow-soft" style="border-color:rgba(165,180,252,.2)">
         <p class="eyebrow text-indigo-300/70 mb-5">Definition</p>
-        <p class="text-2xl md:text-3xl font-bold tracking-tight text-gray-50 leading-snug">YY Method™ is the discipline of making judgment survive probability.</p>
+        <p class="text-2xl md:text-3xl font-bold tracking-tight leading-snug" style="color:var(--ink)">YY Method™ is the discipline of making judgment survive probability.</p>
         <p class="mt-6 text-gray-300 leading-relaxed max-w-3xl">It does this by turning uncertain situations into inspectable loops of hypothesis, opposition, action, correction, and preserved context. Its purpose is to make probabilistic judgment trainable, inspectable, correctable, and transferable — without surrendering human agency to external intelligence.</p>
         <div class="marginalia mt-7 note warm" style="max-width:36rem">
           <span class="ink ink-warm">My standard will always be: can I still hear my childhood buddy YY in my head? Does he still offer cognitive friction? If so, the YY Method is still alive and well for me.</span>
