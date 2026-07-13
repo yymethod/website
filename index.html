@@ -103,7 +103,7 @@
     gtag('event', 'doctrine_page_view');
   </script>
 </head>
-<body class="clean">
+<body>
 
   <!-- SITE-HEADER:START -->
 <header class="w-full sticky top-0 z-30" style="background:rgba(10,11,15,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05)">
@@ -716,7 +716,7 @@
       function apply(hidden) {
         body.classList.toggle('clean', hidden);
       }
-      // body starts with class="clean" (annotations off by default);
+      // body starts with annotations visible by default;
       // only override from a stored explicit preference.
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
