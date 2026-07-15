@@ -10,6 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yymethod.com/violin/" />
   <link rel="icon" href="/assets/images/favicon-256x256.png" />
+  <link rel="stylesheet" href="/assets/legal.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -93,12 +94,27 @@
       *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8N8TQFK8X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    window.gtag = window.gtag || gtag;
     gtag('js', new Date());
-    gtag('config', 'G-B8N8TQFK8X');
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('config', 'G-B8N8TQFK8X', {
+      anonymize_ip: true,
+      send_page_view: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
     gtag('event', 'violin_page_view');
     function track(eventName) {
       if (window.gtag) gtag('event', eventName);
@@ -118,7 +134,7 @@
     <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
       <a href="/doctrine/" class="text-indigo-300/80 hover:text-indigo-200 transition-colors">Doctrine</a>
       <a href="/work/" class="text-[var(--ink)] hover:text-blue-100 transition-colors">Professional Work</a>
-      <a href="/violin/" aria-current="page" class="underline underline-offset-8 decoration-2 text-amber-200 hover:text-amber-100 transition-colors">Violin</a>
+      <a href="/violin/" class="text-amber-200/80 hover:text-amber-100 transition-colors">Violin</a>
       <a href="https://benchantech.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-gray-300 transition-colors">Ben Chan <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="opacity-70"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg><span class="sr-only">(opens in a new tab)</span></a>
     </nav>
   </div>
@@ -577,7 +593,7 @@
 <footer class="mx-auto max-w-7xl px-6 py-8 divider">
   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
-      <span>&copy; 2026 YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+      <span>&copy; 2026 Ben Chan Tech LLC. YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
     </div>
     <div class="flex items-center gap-2">
       <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -586,6 +602,15 @@
       <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
       <a href="https://github.com/yymethod/website/blob/main/VERIFY.md" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-400 transition-colors text-xs ml-1" title="Verify signing key">verify</a>
     </div>
+  </div>
+  <div class="legal-footer-links mt-5 text-xs">
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="/cookies/">Cookies</a>
+    <a href="/accessibility/">Accessibility</a>
+    <a href="/ai-disclosure/">AI Disclosure</a>
+    <a href="/copyright/">Copyright</a>
+    <a href="/contact/">Contact</a>
   </div>
 </footer>
 <!-- SITE-FOOTER:END -->
@@ -606,5 +631,13 @@
       if (methodTarget) observer.observe(methodTarget);
     }
   </script>
+  <section class="consent-banner" aria-label="Analytics cookie notice" hidden>
+    <p>YY Method uses Google Analytics to understand aggregate site use. Analytics cookies are optional.</p>
+    <div>
+      <button type="button" data-consent-choice="denied">Decline</button>
+      <button type="button" data-consent-choice="granted">Allow analytics</button>
+    </div>
+  </section>
+  <script src="/assets/consent.js"></script>
 </body>
 </html>

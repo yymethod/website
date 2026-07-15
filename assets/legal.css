@@ -1,0 +1,153 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #0a0b0f;
+  color: #e5e7eb;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(165,180,252,.8);
+  outline-offset: 4px;
+  border-radius: .35rem;
+}
+
+.ring-fine {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.shadow-soft {
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
+}
+
+.divider {
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.legal-main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.legal-main h1 {
+  margin: 0 0 1.5rem;
+  color: #f9fafb;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.legal-main h2 {
+  margin: 2rem 0 0.6rem;
+  color: #f3f4f6;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.legal-main p,
+.legal-main li {
+  color: #cbd0d6;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-main ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.legal-main a {
+  color: #c7d2fe;
+}
+
+.legal-main a:hover {
+  color: #e0e7ff;
+}
+
+.legal-kicker {
+  margin: 0 0 0.75rem;
+  color: #8b929d;
+  font: 700 0.72rem "Courier New", Courier, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.legal-updated {
+  margin-top: 2.5rem;
+  color: #8b929d;
+  font-size: 0.9rem;
+}
+
+.legal-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  color: #6b7280;
+}
+
+.legal-footer-links a {
+  color: #9ca3af;
+}
+
+.legal-footer-links a:hover {
+  color: #d1d5db;
+}
+
+.consent-banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  width: min(26rem, calc(100vw - 2rem));
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: .65rem;
+  background: rgba(10,11,15,.96);
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
+  color: #d1d5db;
+}
+
+.consent-banner p {
+  margin: 0 0 .8rem;
+  color: #d1d5db;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.consent-banner div {
+  display: flex;
+  justify-content: flex-end;
+  gap: .65rem;
+}
+
+.consent-banner button {
+  min-height: 2.25rem;
+  padding: .5rem .75rem;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: .4rem;
+  background: rgba(255,255,255,.06);
+  color: #f3f4f6;
+  font: 600 .84rem Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.consent-banner button:hover {
+  background: rgba(255,255,255,.1);
+}

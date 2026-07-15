@@ -11,8 +11,16 @@ const ROOT = path.join(__dirname, '..');
 
 const PAGES = [
   'index.html',
+  'doctrine/index.html',
   'work/index.html',
   'violin/index.html',
+  'privacy/index.html',
+  'terms/index.html',
+  'cookies/index.html',
+  'accessibility/index.html',
+  'ai-disclosure/index.html',
+  'copyright/index.html',
+  'contact/index.html',
 ];
 
 function stamp(marker, partialContent, pageContent, pageName) {
