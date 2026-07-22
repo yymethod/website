@@ -100,6 +100,13 @@
     .viz-chip { display:inline-flex; align-items:center; justify-content:center; min-height:1.8rem; padding:.35rem .55rem; border:1px solid rgba(255,255,255,.1); border-radius:.55rem; font-size:.68rem; line-height:1.2; color:#cbd0d6; background:rgba(255,255,255,.035); }
     .viz-chip.hot { border-color:rgba(230,201,143,.34); color:#f3d68a; background:rgba(230,201,143,.07); }
     .viz-chip.cool { border-color:rgba(158,193,230,.32); color:#bfdbfe; background:rgba(158,193,230,.07); }
+    .podcast-embed {
+      width: 100%;
+      min-height: 152px;
+      border: 0;
+      border-radius: .75rem;
+      color-scheme: normal;
+    }
 
     @media (max-width: 1023px) {
       /* on narrow screens, margin rail notes render as inset ink under the text */
@@ -189,6 +196,29 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <div class="mx-auto max-w-3xl px-6 divider"></div>
+
+  <section class="mx-auto max-w-3xl px-6 py-10">
+    <div class="glass rounded-xl p-4 md:p-5">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+        <div>
+          <p class="eyebrow text-indigo-300/70">YY and Me / Episode 9</p>
+          <h2 class="mt-2 text-lg font-semibold tracking-tight">The YY Method</h2>
+        </div>
+        <a href="https://yyandme.benchantech.com/episodes/the-yy-method/" target="_blank" rel="noopener" class="text-xs font-mono text-indigo-300/80 hover:text-indigo-200 transition-colors">Episode page →</a>
+      </div>
+      <p class="mb-4 text-sm leading-relaxed text-gray-500">A short origin story for Capture, Why, Why-Not, Commit, and the rule not to outsource judgment.</p>
+      <iframe
+        data-testid="embed-iframe"
+        class="podcast-embed"
+        src="https://open.spotify.com/embed/episode/6KCh1MOT1fRJ1PGN6cclVA?utm_source=generator"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="YY and Me Episode 9: The YY Method">
+      </iframe>
     </div>
   </section>
   <!-- SITE-FOOTER:START -->
