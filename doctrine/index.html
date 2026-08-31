@@ -18,6 +18,7 @@
       --muted: #9aa0a6;
       --ink: #9ec1e6;        /* human annotation pen */
       --ink-warm: #e6c98f;   /* second pen for emphasis */
+      --ai-blue: #a5b4fc;     /* machine / AI emphasis */
     }
     html { scroll-behavior: smooth; }
     html, body { background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
@@ -184,7 +185,7 @@
         <p class="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl">
           A shared specification for humans and AI systems that need to reason together without collapsing uncertainty into premature answers.
         </p>
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">YY Method™ treats AI as an execution layer for memory, pattern recognition, branching, retrieval, and challenge while keeping belief, authorship, correction, and responsibility with the human. It turns uncertain moments into inspectable loops of Capture, Why, Why-Not, Commit, and Timestamp so answers become evidence instead of authority.</p>
+        <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-2xl">YY Method™ treats AI as an execution layer for memory, pattern recognition, branching, retrieval, bounded generation, and challenge while keeping belief, authorship, correction, and responsibility with the human. It turns uncertain moments into inspectable loops of Capture, Why, Why-Not, Commit, and Timestamp so answers become evidence instead of authority.</p>
         <p class="mt-4 text-gray-300 text-sm leading-relaxed max-w-2xl">The AI carries the branching burden. <span style="color:var(--ink)">You keep the judgment.</span></p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#doctrine" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Start the deep dive</a>
@@ -254,7 +255,9 @@
         <h2 class="eyebrow text-gray-500 mb-4">Why I Am Building This</h2>
         <p class="lead">I am not approaching human-driven AI only as a violin teacher, and I am not approaching violin only as an AI builder.</p>
         <p>I have spent decades performing, practicing, and teaching violin, including a large public archive of explanations and demonstrations. I also work professionally with software, systems, AI behavior, information architecture, and the practical limits of probabilistic tools.</p>
-        <p>Violin for Parents is where those two forms of expertise meet. Violin supplies difficult, embodied, context-sensitive problems that cannot safely be reduced to generic answers. AI supplies the ability to preserve context, navigate branching possibilities, retrieve relevant principles, and adapt the questioning path in real time.</p>
+        <p>Violin is where those two forms of expertise meet. It supplies difficult, embodied, context-sensitive problems that cannot safely be reduced to generic answers. AI supplies the ability to preserve context, navigate branching possibilities, generate bounded adaptation, retrieve relevant principles, and carry work that could never be personalized by hand.</p>
+        <p>Three applications now test that meeting point — a generative practice story, a deterministic pitch curriculum, and a between-lesson coach for parents. Each gives AI a different job, and therefore a different boundary.</p>
+        <p>Violin became the first broad public domain-specific proving ground for the method because that is where the deepest expertise already existed — not because the method is violin-shaped.</p>
         <p class="lead mt-5">YY Method™ supplies the governing boundary between them.</p>
         <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
           <div class="glass rounded-xl p-4">
@@ -290,8 +293,8 @@
         <p style="color:var(--ink-warm)">A learner who runs to an authority every time a question appears, accepts the answer immediately, and acts without testing has not strengthened judgment. <span class="anno">The learner has outsourced it.</span> The problem is not guidance. The problem is unexamined substitution.</p>
         <p>A fluent answer can resolve uncertainty too quickly. When a person offers a conclusion before the observations beneath it, a system can infer a plausible cause and still solve the wrong problem.</p>
         <p>YY Method™ draws a hard line between assistance and dependency. Guidance is healthy when it increases the user's judgment surface. It is corrosive when it narrows that surface, bypasses perception, or turns the user into an executor of someone else's answer.</p>
-        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed text-gray-300" style="border-color:rgba(230,201,143,.24)">
-          <span class="eyebrow text-amber-200/70 block mb-3">Bad Handoff</span>
+        <div class="glass rounded-xl p-5 mt-5 text-sm leading-relaxed" style="border-color:rgba(165,180,252,.24);color:var(--ai-blue)">
+          <span class="eyebrow block mb-3" style="color:var(--ai-blue)">Bad Handoff</span>
           authority answer → untested action → borrowed judgment
         </div>
       </div>
@@ -357,12 +360,12 @@
         <div class="glass rounded-xl p-5">
           <p class="eyebrow text-gray-500">Deterministic layer</p>
           <p class="mt-3 text-gray-200 font-medium text-sm">Preserves structure.</p>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Holds state, boundaries, records, permissions, timestamps, commitments, and continuity.</p>
+          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Holds state, boundaries, records, permissions, timestamps, commitments, and continuity — and verifies the claims that must be objectively true.</p>
         </div>
         <div class="glass rounded-xl p-5">
           <p class="eyebrow text-gray-500">Probabilistic layer</p>
           <p class="mt-3 text-gray-200 font-medium text-sm">Generates interpretation.</p>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Proposes hypotheses, detects patterns, synthesizes context, and adapts to ambiguity.</p>
+          <p class="mt-2 text-sm text-gray-400 leading-relaxed">Proposes hypotheses, detects patterns, synthesizes context, and adapts to ambiguity. Where multiple outputs can be valid, it may also generate bounded local realization — story, variation, connective detail.</p>
         </div>
         <div class="glass rounded-xl p-5" style="border-color:rgba(165,180,252,.48);box-shadow:inset 3px 0 0 rgba(165,180,252,.85);background:rgba(165,180,252,.08)">
           <p class="eyebrow" style="color:var(--ink)">Human layer</p>
@@ -414,12 +417,16 @@
       <div class="mt-8 grid md:grid-cols-2 gap-4 max-w-4xl">
         <div class="glass rounded-xl p-6">
           <p class="eyebrow text-indigo-300/70">The AI system may</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• interview</li><li>• organize</li><li>• compare</li><li>• retrieve</li><li>• challenge</li><li>• simulate</li><li>• remember</li><li>• reflect</li><li>• suggest</li></ul>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• interview</li><li>• organize</li><li>• compare</li><li>• retrieve</li><li>• challenge</li><li>• simulate</li><li>• remember</li><li>• reflect</li><li>• suggest</li><li>• generate within authored bounds</li><li>• verify answers against authored truth</li><li>• carry bounded, confirmed execution</li></ul>
         </div>
         <div class="glass rounded-xl p-6">
           <p class="eyebrow text-gray-500">It should not silently assume authority to</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• diagnose</li><li>• declare truth</li><li>• substitute for a teacher</li><li>• manufacture certainty</li><li>• simulate intimacy or emotional authority</li><li>• persuade the user to accept its interpretation</li><li>• conceal unresolved evidence beneath fluent language</li></ul>
+          <ul class="mt-4 space-y-2 text-sm text-gray-400"><li>• diagnose</li><li>• declare truth</li><li>• substitute for a teacher</li><li>• manufacture certainty</li><li>• convert simulated relationships or emotional attachment into leverage or authority</li><li>• persuade the user to accept its interpretation</li><li>• conceal unresolved evidence beneath fluent language</li></ul>
         </div>
+      </div>
+      <div class="mt-6 max-w-2xl">
+        <p class="text-sm leading-relaxed text-gray-400">The method does not require weak AI. It constrains authority, not capability: the system may execute substantial work without inheriting the human judgment — or the domain authority — underneath it.</p>
+        <p class="mt-4 text-gray-100 font-semibold">Capability does not create authority.</p>
       </div>
     </section>
 
@@ -477,6 +484,8 @@
           “Bow hand or violin hand?”
         </div>
         <p class="mt-5">A useful AI system does not choose one cause. It asks a question that removes entire branches. That distinction immediately eliminates unrelated technical pathways. A second question narrows the space again. The system continues until there is enough evidence for one safe, bounded next move, or enough uncertainty to defer to a human expert.</p>
+        <p>The same move works far from violin. A language learner says: "My accent sounds bad." A weak system hears a conclusion and prescribes drills. A YY-aligned system asks which question removes the most haystack first: bad for what goal — being easily understood, or sounding native? In which situations — conversation, presentations, reading aloud? Against which target accent, at which fluency level, judged by whom? One or two of those distinctions can eliminate most of the practice a generic answer would have prescribed.</p>
+        <p>The domain changes. The discipline doesn't.</p>
         <p>Traditional software required designers to prebuild every branch. Modern AI can navigate the tree dynamically: clarify, double back, move sideways, preserve multiple hypotheses, and adapt the depth of questioning to the user.</p>
         <p class="lead mt-5">The AI can navigate the pathways. It should not declare which pathway is truth before the human has enough evidence to judge.</p>
       </div>
@@ -611,6 +620,31 @@
 
     <div class="divider"></div>
 
+    <!-- Authority contraction -->
+    <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
+      <div class="max-w-2xl">
+        <h2 class="eyebrow text-gray-500 mb-4">Authority Contracts as Uncertainty Grows</h2>
+        <p class="lead">A common AI failure is directional.</p>
+        <p>The model senses that a question is beyond its evidence or outside its territory — and responds by becoming more directive. "You should see this specialist." "This sounds like this condition." That is still authority. It has just been relocated.</p>
+        <p>A YY-aligned system moves the other way. The less certain the system is, and the closer a question comes to the edge of what it should decide, the less authority it claims: back to observation, one clarifying question, a reversible step, or a handoff to the human who actually owns the decision.</p>
+        <p>Two corollaries follow.</p>
+        <p>When evidence cannot be verified, the system fails conservatively. It does less, not more. A missing record is not permission to guess.</p>
+        <p>And generated output is not evidence. A summary the system wrote yesterday does not become a fact it may cite tomorrow. Interpretation must keep returning to the observations underneath it — it cannot compound into certainty by citing itself.</p>
+      </div>
+      <aside class="marginalia lg:pt-9">
+        <div class="viz-card glass rounded-xl p-5">
+          <p class="viz-title">Contraction Rule</p>
+          <div class="mt-4 space-y-3 text-sm text-gray-300">
+            <p>more uncertainty → less claimed authority</p>
+            <div class="viz-line"></div>
+            <p class="text-gray-500">not: more uncertainty → stronger recommendation</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- Correction over obedience -->
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
@@ -677,8 +711,10 @@
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">What should the system remember?</span></div>
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span style="color:var(--ink-warm)">When should it defer to a human?</span></div>
           <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span style="color:var(--ink)">How do we measure whether the user's judgment is actually improving?</span></div>
+          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">What may a generative layer invent, and what must it never overwrite?</span></div>
+          <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">When does adaptation become manipulation?</span></div>
         </div>
-        <p class="mt-6 lead">Violin for Parents is the first applied test of this framework.</p>
+        <p class="mt-6 lead">The three violin applications are the first public applied tests of this framework — one generative, one deterministic, one advisory. The same doctrine produces different boundaries in each. That difference is the evidence.</p>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="viz-card glass rounded-xl p-5">
@@ -703,30 +739,50 @@
     <section class="grid lg:grid-cols-[1fr_270px] gap-x-10 py-12">
       <div class="max-w-2xl">
         <h2 class="eyebrow text-gray-500 mb-4">Applied in Practice</h2>
-        <p class="mb-5">YY Method™ may generalize across domains, but its credibility comes from being tested inside a difficult one. Violin practice is embodied, ambiguous, teacher-mediated, emotionally charged, and full of partial evidence.</p>
+        <p class="mb-5">YY Method™ may generalize across domains, but its credibility comes from being tested inside a difficult one. Violin practice is embodied, ambiguous, teacher-mediated, emotionally charged, and full of partial evidence. It is not the only domain with that shape. Language learning poses many of the same structural problems, and the same discipline can be applied there. Violin is the first domain in which the method has been developed into a broad public family of applied systems, because it is where the deepest expertise already existed.</p>
         <div class="glass rounded-xl p-6 md:p-7" style="border-color:rgba(214,177,95,.28);box-shadow:inset 2px 0 0 rgba(214,177,95,.7)">
           <p class="eyebrow text-amber-200/70 mb-3">Public Application</p>
           <h3 class="text-gray-100 font-semibold text-lg tracking-tight">YY Method™ for Violin</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-400">
-            A public application of the doctrine for violin parents and AI coaching systems: turn uncertain between-lesson moments into clearer observations, better teacher questions, and bounded next steps.
-          </p>
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">One method, three applications, one human boundary: the map of how the doctrine becomes product behavior at the music stand — for the learner, for the adult between lessons, and for the teacher, who deliberately has no app.</p>
           <a
             href="/violin/?utm_source=yymethod.com&utm_medium=internal&utm_campaign=applications&utm_content=doctrine_page_card"
             onclick="window.gtag && gtag('event','doctrine_violin_application_click')"
             class="inline-flex mt-5 text-xs font-mono text-amber-200/80 hover:text-amber-100 transition-colors"
-          >Inspect the violin application →</a>
+          >See the violin application →</a>
         </div>
       </div>
       <aside class="marginalia lg:pt-9">
         <div class="viz-card glass rounded-xl p-5">
           <p class="viz-title">Direct Application</p>
-          <div class="mt-4 grid gap-2">
-            <span class="viz-chip">practice uncertainty</span>
-            <span class="viz-chip cool">better question</span>
-            <span class="viz-chip hot">human lesson</span>
-          </div>
+          <div class="mt-4 text-sm leading-relaxed text-gray-300">doctrine → violin map → three applied systems</div>
         </div>
       </aside>
+    </section>
+
+    <section class="py-12 pt-0">
+      <p class="eyebrow text-indigo-300/70">Applied YY Method™</p>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight max-w-3xl">Three applications. Three boundaries.</h2>
+      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">The same doctrine creates different AI boundaries in different systems.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <article class="glass rounded-xl p-6">
+          <img src="/assets/images/music-practice-rpg-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
+          <h3 class="text-lg font-semibold">Music Practice RPG</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">Generative storytelling without surrendering musical agency.</p>
+          <div class="mt-5 flex flex-col gap-2"><a href="/music-practice-rpg/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/music-practice-rpg" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <img src="/assets/images/violin-pitch-builder-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
+          <h3 class="text-lg font-semibold">Violin Pitch Builder</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">Adaptive learning without surrendering musical truth.</p>
+          <div class="mt-5 flex flex-col gap-2"><a href="/violin-pitch-builder/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/violin-pitch-builder" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <img src="/assets/images/violin-for-parents-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
+          <h3 class="text-lg font-semibold">Violin for Parents</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">Between-lesson support without surrendering teacher authority.</p>
+          <div class="mt-5 flex flex-col gap-2"><a href="/violin-for-parents/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/violin-for-parents" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
+        </article>
+      </div>
     </section>
 
     <div class="divider"></div>
@@ -801,6 +857,7 @@
         <p><span class="text-gray-100 font-medium">Living thought</span> may be exploratory, unresolved, personal, contradictory, or incomplete. It is where judgment forms under pressure.</p>
         <p><span class="text-gray-100 font-medium">Formal doctrine</span> is compressed, structured, and reusable. It exists so humans and machines can understand, retrieve, test, and apply the method across contexts.</p>
         <p>Both layers matter. The living layer preserves origin. The formal layer preserves transfer. A durable method needs both.</p>
+        <p>YY Method™ was formally consolidated in August 2025, after earlier development and documented work that year. It has continued to evolve since: the living layer keeps testing the doctrine against real cases and real products, and when a revision earns its place, the formal layer is updated and a new lineage version is closed and signed. The version record in the footer is the public trail of that evolution.</p>
         <div class="glass rounded-xl p-5 mt-6">
           <p class="eyebrow text-indigo-300/70">Resonant Patterns</p>
           <p class="mt-3 text-sm leading-relaxed text-gray-400"><a href="https://benchanviolin.substack.com/p/new-strings-attached" target="_blank" rel="noopener" class="text-indigo-200/80 hover:text-indigo-100 transition-colors">“New Strings Attached”</a> is one example of the living layer: violin discipline being tested against piano, Mandarin, cooking, and writing before any pattern is allowed to become doctrine.</p>
@@ -844,6 +901,11 @@
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">treat recommendations as hypotheses rather than commands</span></div>
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">allow the user to correct the system</span></div>
         <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">make the next move clear without pretending the next move is final</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">give AI freedom where multiple outputs can be valid; remove it where truth matters</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">contract claimed authority as uncertainty or jurisdictional distance grows</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">fail conservatively when evidence cannot be verified</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">never treat generated output as evidence for the next generated conclusion</span></div>
+        <div class="flex gap-3"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">never convert attachment, absence, or engagement into leverage over the human</span></div>
         <div class="flex gap-3 md:col-span-2"><span class="text-indigo-300/50 select-none">—</span><span class="text-gray-300">strengthen the user's future judgment rather than merely completing the present task</span></div>
       </div>
     </section>
@@ -885,41 +947,13 @@
       </div>
     </section>
 
-    <div class="divider"></div>
-
-    <section class="py-12">
-      <p class="eyebrow text-indigo-300/70">Applied YY Method™</p>
-      <h2 class="mt-4 text-3xl font-bold tracking-tight max-w-3xl">The same doctrine creates different AI boundaries in different systems.</h2>
-      <p class="mt-5 text-sm leading-relaxed text-gray-400 max-w-3xl">These applied pages show how the governing idea changes when AI is asked to carry generative story, deterministic music-learning adaptation, or between-lesson parent support.</p>
-      <div class="mt-8 grid md:grid-cols-3 gap-4">
-        <article class="glass rounded-xl p-6">
-          <img src="/assets/images/music-practice-rpg-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
-          <h3 class="text-lg font-semibold">Music Practice RPG</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-400">Generative storytelling without surrendering musical agency.</p>
-          <div class="mt-5 flex flex-col gap-2"><a href="/music-practice-rpg/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/music-practice-rpg" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
-        </article>
-        <article class="glass rounded-xl p-6">
-          <img src="/assets/images/violin-pitch-builder-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
-          <h3 class="text-lg font-semibold">Violin Pitch Builder</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-400">Adaptive learning without surrendering musical truth.</p>
-          <div class="mt-5 flex flex-col gap-2"><a href="/violin-pitch-builder/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/violin-pitch-builder" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
-        </article>
-        <article class="glass rounded-xl p-6">
-          <img src="/assets/images/violin-for-parents-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" />
-          <h3 class="text-lg font-semibold">Violin for Parents</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-400">Between-lesson support without surrendering teacher authority.</p>
-          <div class="mt-5 flex flex-col gap-2"><a href="/violin-for-parents/" class="inline-flex text-sm font-semibold text-indigo-200/90 hover:text-indigo-100">Explore →</a><a href="https://benchanviolin.com/violin-for-parents" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div>
-        </article>
-      </div>
-    </section>
-
   </main>
 
   <!-- SITE-FOOTER:START -->
 <footer class="mx-auto max-w-7xl px-6 py-8 divider">
   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
-      <span>&copy; 2026 Ben Chan Tech LLC. YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+      <span>&copy; 2026 Ben Chan Tech LLC. YY Method™ &nbsp;·&nbsp; Public doctrine lineage closed v2.4 &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
     </div>
     <div class="flex items-center gap-2">
       <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

@@ -29,7 +29,7 @@ Check that the `public-key.asc` file has not been altered.
 
 ```bash
 shasum -a 256 keys/public-key.asc
-# Must equal: 4560c6d0fe25d7af8f217d412b3ddcf24fef8d8e8f57b828aa07e548b891d227
+# Must equal: 48c3c047fac935b217225bb45dbdcfd56582126bde956df5b919dbf298b45b8c
 ```
 
 ✅ If the hash matches exactly, the file is authentic.
