@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Practice RPG | Generative AI With Human Musical Agency | YY Method™</title>
+  <meta name="description" content="How Music Practice RPG uses the YY Method to constrain generative story, preserve teacher and player authority, protect teens from coercive engagement, and keep AI subordinate to real music practice." />
+  <link rel="icon" href="/assets/images/favicon-256x256.png" />
+  <link rel="stylesheet" href="/assets/legal.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --bg:#0a0b0f; --fg:#e5e7eb; --ink:#9ec1e6; --ink-warm:#e6c98f; }
+    html { scroll-behavior:smooth; } html,body { background:var(--bg); color:var(--fg); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    a:focus-visible { outline:2px solid rgba(165,180,252,.8); outline-offset:4px; border-radius:.35rem; }
+    .glass { background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.08); }
+    .ring-fine { box-shadow:inset 0 0 0 1px rgba(255,255,255,.08); } .shadow-soft { box-shadow:0 20px 40px rgba(0,0,0,.45); }
+    .divider { border-top:1px solid rgba(255,255,255,.07); }
+    .eyebrow { font-family:"Courier New",Courier,monospace; text-transform:uppercase; letter-spacing:.08em; font-size:.72rem; color:#8b929d; font-weight:700; }
+    .doc p { font-size:.975rem; line-height:1.8; color:#b6bcc4; } .doc p+p { margin-top:1.1rem; } .doc .lead { color:#dde1e6; font-weight:500; }
+    .doc h2 { color:#f3f4f6; font-size:1.65rem; line-height:1.2; font-weight:700; letter-spacing:-.01em; } .doc h3 { color:#f3f4f6; font-size:1.1rem; font-weight:700; }
+    .ink-inline { font-family:Caveat,cursive; color:var(--ink); font-size:1.18rem; line-height:1.3; font-weight:600; display:block; margin-top:.85rem; padding:.5rem 0 .5rem .9rem; border-left:2px solid rgba(158,193,230,.5); }
+    .viz-title { font-family:"Courier New",Courier,monospace; text-transform:uppercase; letter-spacing:.1em; font-size:.66rem; color:#8b929d; font-weight:700; }
+    .viz-box { border:1px solid rgba(255,255,255,.09); border-radius:.65rem; background:rgba(255,255,255,.035); padding:.7rem .8rem; }
+    .viz-label { font-family:"Courier New",Courier,monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:#a5b4fc; }
+    .viz-line { height:1px; background:linear-gradient(90deg,rgba(165,180,252,.55),rgba(230,201,143,.45)); }
+    .machine-strip { background:radial-gradient(circle at 82% 20%,rgba(165,180,252,.10),transparent 30%),repeating-linear-gradient(0deg,transparent 0 1.35rem,rgba(255,255,255,.03) 1.37rem 1.43rem); }
+    .app-card:hover { border-color:rgba(165,180,252,.32); }
+  </style>
+</head>
+<body>
+  <!-- SITE-HEADER:START -->
+<header class="w-full sticky top-0 z-30" style="background:rgba(10,11,15,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05)">
+  <div class="mx-auto max-w-7xl px-6 py-6 flex items-center">
+    <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
+      <div class="h-10 w-10 rounded-xl overflow-hidden ring-fine shadow-soft bg-white/5">
+        <img src="/assets/images/favicon-256x256.png" alt="YY mark" class="h-full w-full object-contain" />
+      </div>
+      <span class="text-lg">YY Method™</span>
+    </a>
+    <nav class="ml-auto flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-gray-600">
+      <a href="/doctrine/" class="text-indigo-300/80 hover:text-indigo-200 transition-colors">Doctrine</a>
+      <a href="/work/" class="text-[var(--ink)] hover:text-blue-100 transition-colors">Professional Work</a>
+      <a href="/violin/" class="text-amber-200/80 hover:text-amber-100 transition-colors">Violin</a>
+      <a href="/#applications" class="text-gray-500 hover:text-gray-300 transition-colors">Applications</a>
+      <a href="https://benchantech.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-gray-300 transition-colors">Ben Chan <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="opacity-70"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg><span class="sr-only">(opens in a new tab)</span></a>
+    </nav>
+  </div>
+</header>
+<!-- SITE-HEADER:END -->
+  <main>
+    <section class="mx-auto max-w-6xl px-6 pt-10 pb-14">
+      <div class="grid lg:grid-cols-[1fr_.82fr] gap-10 lg:gap-16 items-start">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-300/70">YY Method™ / Applied System / Music Practice RPG</p>
+          <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Practice writes the story. <span style="color:var(--ink)">AI doesn't get to write the rules.</span></h1>
+          <div class="mt-6 space-y-4 text-sm md:text-base leading-relaxed text-gray-400 max-w-2xl">
+            <p>Music Practice RPG turns real music practice into the action that changes an evolving fictional world.</p>
+            <p>You practice your actual instrument and your actual music. You make one meaningful choice about what your character attempts. Then you leave — and come back later to find out what your practice caused.</p>
+            <p>That design immediately raises a hard question. If an AI can tell compelling stories, remember characters, respond to your choices, and leave a consequence hanging until tomorrow, where should its authority stop?</p>
+            <p class="text-gray-200 font-semibold">The human authors the world. The player authors their path through it. AI writes the local scene that connects them.</p>
+          </div>
+          <div class="mt-7 glass rounded-xl p-5">
+            <p class="eyebrow text-indigo-300/70">Quick Answer</p>
+            <p class="mt-3 text-sm leading-relaxed text-gray-300">Music Practice RPG uses AI to generate parts of an evolving fictional story around real music practice. The world and major characters are human-authored, the player controls their own meaningful choices, and AI fills in the local connective story. The app is designed so missed days cannot punish the player, characters cannot guilt anyone into returning, and better playing does not buy better story treatment. It is built for musicians age 13 and up.</p>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="https://benchanviolin.com/music-practice-rpg" target="_blank" rel="noopener" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Try Music Practice RPG →<span class="sr-only"> (opens in a new tab)</span></a>
+            <a href="#governing-model" class="inline-flex justify-center rounded-xl bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-950 hover:bg-indigo-100 transition-colors">Read the governing model ↓</a>
+            <a href="/doctrine/" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-indigo-300/40 hover:text-indigo-100 transition-colors">YY Method doctrine →</a>
+            <a href="/violin/" class="inline-flex justify-center rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:border-amber-200/40 hover:text-amber-100 transition-colors">Violin application →</a>
+          </div>
+        </div>
+        <aside class="machine-strip glass rounded-2xl p-6 md:p-7 shadow-soft">
+          <p class="viz-title">Operating Boundary</p>
+          <div class="mt-4 grid gap-3">
+            <div class="viz-box"><p class="viz-label" style="color:var(--ink)">Human</p><p class="mt-2 text-xs text-gray-300">world, canon, values, limits</p></div>
+            <div class="viz-box"><p class="viz-label" style="color:var(--ink-warm)">Player</p><p class="mt-2 text-xs text-gray-300">music, choices, corrections, history</p></div>
+            <div class="viz-box"><p class="viz-label">AI</p><p class="mt-2 text-xs text-gray-300">local realization</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <div class="mx-auto max-w-3xl px-6 divider"></div>
+    <article id="governing-model" class="doc mx-auto max-w-3xl px-6">
+      <section class="py-12"><h2>Why use generative AI here at all?</h2><p class="lead mt-4">A traditional music game prewrites a finite set of scenes. Everyone gets roughly the same story.</p><p>Music Practice RPG is trying to do something different: a daily continuation shaped by one musician's actual practice and accumulated history. You arrive with your own music, assignments, available time, decisions, and fictional history. The AI's job is narrow: connect a human-authored fictional world to the history you actually created.</p><p>The generative layer exists because the daily connective tissue is player-specific. It is not there because generating more content is inherently good.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>The music has to stay real</h2><p>The app does not manufacture your performance. You practice your actual instrument — your repertoire, your scales, your teacher's assignment, whatever is really on your stand.</p><p class="lead">Not: play better → deserve a better story.</p><p class="lead">Instead: practice real music → make a meaningful choice → leave a history behind.</p><p>Recording yourself is optional throughout. Telling the app how long you actually practiced is enough for full participation. A recording only adds detail to how the world responds — it never becomes a gate, a grade, or a test of honesty.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>How a session actually works</h2><p class="lead">The central product law is deliberately simple: practice writes the story.</p><p>A session opens by revealing what your last choice caused. You face a live situation. You decide one thing your character attempts. Then the app sends you back to your real instrument.</p><p>When you finish, you report what you practiced and for how long. Optionally, you can record. Then the session ends — deliberately, before the outcome of your choice is revealed.</p><p class="lead">I practiced. I changed something. I don't yet know what happened. I want to come back and find out.</p><span class="ink-inline">Making a compelling world while minimizing guilt for missed days is the tightrope I'm choosing to walk today. - B.C.</span></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>What happens if I stop opening the app?</h2><p class="lead">Nothing bad. Missing days cannot make the fictional world worse.</p><p>If you don't open the app for five days, the roof at the inn cannot leak more because you were gone. A character cannot get hurt because you missed practice. You cannot lose resources, standing, opportunities, or story quality because you took a break.</p><p class="lead">Fictional events may follow fictional causes. Real-world absence may not be converted into fictional harm.</p><div class="glass rounded-xl p-5 mt-5"><p class="viz-title">Return Boundary</p><p class="mt-3 text-sm text-gray-300">anticipation → voluntary return</p><div class="viz-line my-4"></div><p class="text-sm text-gray-400">not: absence → punishment / urgency / attachment pressure</p></div></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Can the app secretly get warmer or more dramatic to win me back?</h2><p class="lead">No. Inactivity is not allowed to become a hidden retention variable.</p><p>How long you've been away must not itself increase story intensity, emotional warmth, dramatic urgency, cliffhanger size, character dependence, reward magnitude, or notification frequency. The story can change because the story changed. It should not change because a retention system decided you were drifting away.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Can YY guilt me into coming back?</h2><p class="lead">No.</p><p>YY is the recurring fictional companion of Music Practice RPG. Character attachment must never become leverage over real-world app usage.</p><ul class="mt-5 space-y-2 text-sm leading-relaxed text-gray-400"><li>• no loneliness because you did not open the app</li><li>• no desperation, disappointment, abandonment, or need language about app use</li><li>• no implication that characters suffered because you were absent</li></ul><p>Characters can care intensely about events inside the story. They cannot turn that relationship into pressure to keep using a software product.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Is YY just a cheerleader?</h2><p>No — and for younger teens especially, that's deliberate. A relentlessly approving pseudo-friend who validates everything you do is its own kind of manipulation. YY is a fictional character, not an affection meter, therapist, engagement bot, or emotional reward dispenser.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Do I control the story?</h2><p>You control what your character attempts. You don't control what reality does about it. The distinction — attempt versus outcome — protects both your agency and the integrity of the fiction.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Does better playing earn a better story?</h2><p class="lead">No. Musical quality never becomes a measure of worth.</p><p>A rough, honest practice session can produce as meaningful a story as a polished one. What practice evidence can change is the texture of how the world responds — never whether you deserved a good outcome.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Does this replace a music teacher?</h2><p>No. If you have a teacher, the teacher stays above the app. The app can help you practice what you were assigned, organize what happened, and respond to your real work inside the story. It cannot override your teacher's technique, sequencing, or corrections.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Why does the story stop after practice?</h2><p class="lead">Because unlimited generated story would reverse the point of the app.</p><p>There is no unlimited continue story button. No same-day story farming. No endless generated scenes, passive reading loops, or image-reward loops. A substantive session ends with the consequence unresolved — and hands you back your instrument.</p><div class="glass rounded-xl p-5 mt-5"><p class="viz-title">Generative Loop</p><p class="mt-3 text-sm text-gray-300">story → player choice → real instrument → stop → later consequence</p><div class="viz-line my-4"></div><p class="text-sm text-gray-400">not: story → story → story → engagement</p></div><span class="ink-inline">If the player decides to build the world without practicing, this app has failed to do its job properly. - B.C.</span></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Can the subscription model influence the story?</h2><p>A subscription business has an obvious temptation: keep the story unresolved so the player keeps paying. The rule is: narrative retention is legitimate only insofar as the application continues to support worthwhile musical practice. Dependency is not the success metric.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>What about notifications?</h2><p>Notifications are practice logistics, not story pressure: no character-authored come-back messages, no unresolved-story teasers, no countdowns, no missed-day escalation, and no claims that fictional danger is worsening because you have not returned.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Is it safe for teenagers?</h2><p>Music Practice RPG is designed for ages 13 and up. It is not an under-13 application, and it does not target or personalize for younger children. The design treats emotional attachment, character behavior, return mechanics, and notifications as architecture rather than as a generic AI disclaimer.</p></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>Who actually wrote this story?</h2><p>AI generates prose in this app, every day, for every player. The design response is to keep the layers distinct and legible.</p><div class="mt-6 grid md:grid-cols-3 gap-4"><div class="glass rounded-xl p-5"><h3>Human-authored layer</h3><p class="mt-3">Premise, rules, core characters, long-range structure, musical philosophy, and safety boundaries.</p></div><div class="glass rounded-xl p-5"><h3>Player-authored layer</h3><p class="mt-3">Your real music, decisions, refusals, corrections, invented actions, and accumulated history.</p></div><div class="glass rounded-xl p-5"><h3>AI-generated layer</h3><p class="mt-3">Bounded local realization: dialogue, consequences, discoveries, reactions, and connective scenes.</p></div></div><div class="glass rounded-xl p-5 mt-5"><p class="viz-title">Authorship Flow</p><p class="mt-3 text-sm text-gray-300">Human canon → Player choice + real music → AI local realization → Persistent consequence</p></div><span class="ink-inline">I'm very concerned about authorship. AI is allowed to improvise, but only within the bounds I and the player have authorized. - B.C.</span></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>What the AI will not do</h2><ul class="mt-5 space-y-2 text-sm leading-relaxed text-gray-400"><li>• replace the musician's performance</li><li>• turn musical quality into human worth</li><li>• override a current teacher</li><li>• turn YY into an emotional retention mechanism</li><li>• punish real-world absence or escalate after inactivity</li><li>• manufacture cliffhangers primarily for subscription retention</li><li>• offer unlimited AI story consumption</li><li>• silently rewrite foundational canon</li></ul></section>
+      <div class="divider"></div>
+      <section class="py-12"><h2>What this teaches me about the YY Method</h2><p>Music Practice RPG is the most generative of these three systems. The method does not require AI to be timid. It requires the assignment of authority to remain legible. The AI can carry the branching burden of a living story. The human keeps the judgment.</p><p class="lead">Human world. Human music. Player agency. AI adaptation.</p></section>
+    </article>
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <p class="eyebrow">Related YY Method pages</p>
+      <div class="mt-5 flex flex-col sm:flex-row gap-3"><a href="/doctrine/" class="inline-flex rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:text-indigo-100">Read the doctrine →</a><a href="/violin/" class="inline-flex rounded-xl border border-white/10 px-5 py-3 text-sm font-semibold text-gray-300 hover:text-amber-100">See the violin application →</a></div>
+    </section>
+    <section class="mx-auto max-w-5xl px-6 py-12">
+      <h2 class="text-3xl font-bold tracking-tight">Three systems. Three different AI boundaries.</h2>
+      <p class="mt-4 text-sm leading-relaxed text-gray-400 max-w-3xl">The same doctrine creates different constraints depending on what AI is being asked to do.</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <article class="app-card glass rounded-xl p-6 cursor-pointer" role="link" tabindex="0" aria-label="Open the Violin Pitch Builder YY Method page" onclick="if (!event.target.closest('a')) location.href='/violin-pitch-builder/'" onkeydown="if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a')) { event.preventDefault(); location.href='/violin-pitch-builder/'; }"><img src="/assets/images/violin-pitch-builder-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" /><h3>Violin Pitch Builder</h3><p class="mt-3 text-sm font-semibold text-gray-200">Adaptive learning without surrendering musical truth.</p><p class="mt-3 text-sm text-gray-400">The AI may adapt the village around verified material. It may not invent pitch truth, violin pedagogy, player history, or creative judgment.</p><div class="mt-5 flex flex-col gap-2"><a href="/violin-pitch-builder/" class="inline-flex text-sm font-semibold text-indigo-200">Explore →</a><a href="https://benchanviolin.com/violin-pitch-builder" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div></article>
+        <article class="app-card glass rounded-xl p-6 cursor-pointer" role="link" tabindex="0" aria-label="Open the Violin for Parents YY Method page" onclick="if (!event.target.closest('a')) location.href='/violin-for-parents/'" onkeydown="if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('a')) { event.preventDefault(); location.href='/violin-for-parents/'; }"><img src="/assets/images/violin-for-parents-hero.png" alt="" class="mb-5 aspect-[16/9] w-full rounded-lg object-cover ring-fine" loading="lazy" /><h3>Violin for Parents</h3><p class="mt-3 text-sm font-semibold text-gray-200">Between-lesson support without surrendering teacher authority.</p><p class="mt-3 text-sm text-gray-400">The AI may carry branching, memory, comparison, and preparation. It may not quietly inherit consequential decisions.</p><div class="mt-5 flex flex-col gap-2"><a href="/violin-for-parents/" class="inline-flex text-sm font-semibold text-indigo-200">Explore →</a><a href="https://benchanviolin.com/violin-for-parents" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-gray-400 hover:text-gray-200">Open app ↗<span class="sr-only"> (opens in a new tab)</span></a></div></article>
+      </div>
+      <p class="mt-8 text-lg font-semibold text-gray-100">The YY Method does not ask one question—"How much AI should we use?"</p>
+      <p class="mt-2 text-lg font-semibold text-gray-100">It asks the harder one: "What exact job should the AI be trusted to do here?"</p>
+    </section>
+  </main>
+  <!-- SITE-FOOTER:START -->
+<footer class="mx-auto max-w-7xl px-6 py-8 divider">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+      <span>&copy; 2026 Ben Chan Tech LLC. YY Method™ &nbsp;·&nbsp; Professional independent lineage closed v2.3</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <svg class="text-gray-700 shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <span class="font-mono text-xs text-gray-600 tracking-tight select-all">63FC 60BA 7F66 F645 CFBF&thinsp;9C84 82BB D729 44B8 168E</span>
+      <a href="https://github.com/yymethod/website/blob/main/VERIFY.md" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-400 transition-colors text-xs ml-1" title="Verify signing key">verify</a>
+    </div>
+  </div>
+  <div class="legal-footer-links mt-5 text-xs">
+    <a href="/music-practice-rpg/">Music Practice RPG</a>
+    <a href="/violin-pitch-builder/">Violin Pitch Builder</a>
+    <a href="/violin-for-parents/">Violin for Parents</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="/cookies/">Cookies</a>
+    <a href="/accessibility/">Accessibility</a>
+    <a href="/ai-disclosure/">AI Disclosure</a>
+    <a href="/copyright/">Copyright</a>
+    <a href="/contact/">Contact</a>
+  </div>
+</footer>
+<!-- SITE-FOOTER:END -->
+  <section class="consent-banner" aria-label="Analytics cookie notice" hidden><p>YY Method uses Google Analytics to understand aggregate site use. Analytics cookies are optional.</p><div><button type="button" data-consent-choice="denied">Decline</button><button type="button" data-consent-choice="granted">Allow analytics</button></div></section>
+  <script src="/assets/consent.js"></script>
+</body>
+</html>
