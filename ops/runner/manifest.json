@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "repositoryId": "yymethod",
+  "repositoryFullName": "yymethod/website",
+  "requestPath": "ops/runner/request.json",
+  "receiptPath": "ops/runner/receipt.json",
+  "branchGlob": "goal-*-run-*",
+  "profiles": [
+    {
+      "profileId": "goal-0016-site-readiness",
+      "goalId": "GOAL-0016",
+      "cwd": ".",
+      "branchRegex": "^goal-0016-run-[A-Za-z0-9._-]+$",
+      "allowedNodeScripts": [
+        "scripts/verify-runner-goal0016-profile.mjs",
+        "scripts/verify-seo-canonical.mjs"
+      ]
+    },
+    {
+      "profileId": "goal-0016-deploy-production",
+      "goalId": "GOAL-0016",
+      "cwd": ".",
+      "branchRegex": "^goal-0016-run-[A-Za-z0-9._-]+$",
+      "allowedNodeScripts": [
+        "scripts/deploy-production.mjs"
+      ]
+    }
+  ]
+}
