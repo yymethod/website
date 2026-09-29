@@ -1,0 +1,11 @@
+{
+  "name": "yymethod-website-runner",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "check:runner-goal0016-profile": "node scripts/verify-runner-goal0016-profile.mjs",
+    "check:seo-canonical": "node scripts/verify-seo-canonical.mjs",
+    "check:deploy-production": "node scripts/deploy-production.mjs"
+  }
+}
