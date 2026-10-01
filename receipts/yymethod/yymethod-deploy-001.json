@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "requestSchemaVersion": 2,
+  "requestId": "yymethod-deploy-001",
+  "repositoryId": "yymethod",
+  "repositoryFullName": "yymethod/website",
+  "profileId": "goal-0016-deploy-production",
+  "goalId": "GOAL-0016",
+  "branch": "goal-0016-run-yymethod-deploy-001",
+  "targetSha": "c1e368a4a3b294d1e2b5c7422c2c7388c52dd64d",
+  "cwd": ".",
+  "kind": "npm-script",
+  "script": "check:deploy-production",
+  "safetyValidation": "pass",
+  "exitCode": 1,
+  "startedAt": "2026-09-29T19:56:58Z",
+  "finishedAt": "2026-09-29T19:56:59Z",
+  "outputSha256": "f2ccb48bd2f0ee1c6f78fb6c4c01be26a1fca331ef88465ad749427ab414fb67",
+  "output": "npm notice run yymethod-website-runner@0.0.0 check:deploy-production\nnpm notice run node scripts/deploy-production.mjs\nVercel CLI 54.19.0 (Node.js 26.4.0)\n> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.\n> This information is used to shape the CLI roadmap and prioritize features.\n> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:\n> https://vercel.com/docs/cli/about-telemetry\nError: No existing credentials found. Please run `vercel login` or pass \"--token\"\nLearn More: https://err.sh/vercel/no-credentials-found\nnode:internal/errors:998\n  const err = new Error(message);\n              ^\n\nError: Command failed: vercel deploy --prod --yes\n    at genericNodeError (node:internal/errors:998:15)\n    at wrappedFn (node:internal/errors:543:14)\n    at checkExecSyncError (node:child_process:926:11)\n    at execFileSync (node:child_process:962:15)\n    at file:///Users/benchan/Library/Application%20Support/BenChanTech/BctRunner/worktree.y5F8Zx/scripts/deploy-production.mjs:2:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)\n    at async node:internal/modules/esm/loader:646:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  status: 1,\n  signal: null,\n  output: [ null, null, null ],\n  pid: 64877,\n  stdout: null,\n  stderr: null\n}\n\nNode.js v26.4.0\n"
+}

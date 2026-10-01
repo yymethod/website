@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "requestSchemaVersion": 2,
+  "requestId": "yymethod-seo-verify-001",
+  "repositoryId": "yymethod",
+  "repositoryFullName": "yymethod/website",
+  "profileId": "goal-0016-site-readiness",
+  "goalId": "GOAL-0016",
+  "branch": "goal-0016-run-yymethod-seo-verify-001",
+  "targetSha": "c1e368a4a3b294d1e2b5c7422c2c7388c52dd64d",
+  "cwd": ".",
+  "kind": "npm-script",
+  "script": "check:seo-canonical",
+  "safetyValidation": "pass",
+  "exitCode": 0,
+  "startedAt": "2026-09-29T19:46:02Z",
+  "finishedAt": "2026-09-29T19:46:02Z",
+  "outputSha256": "79beab40dd8bc452169621bcafdbc67663ffde9f6d5da2b074cfcce85706267d",
+  "output": "npm notice run yymethod-website-runner@0.0.0 check:seo-canonical\nnpm notice run node scripts/verify-seo-canonical.mjs\nyymethod canonical SEO contract ok\n"
+}
